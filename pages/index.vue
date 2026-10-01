@@ -172,7 +172,7 @@
       </div>
 
       <!--Body-->
-      <div class="flex gap-6 max-sm:flex-col">
+      <div class="flex sm:gap-6 max-sm:flex-col">
         <div data-aos="fade-right" class="flex flex-col justify-center">
           <div class="p-10 sm:text-right space-y-2">
             <p class="text-lg font-bold text-primary">Radiation Detection</p>
@@ -192,7 +192,7 @@
             </p>
           </div>
         </div>
-        <div data-aos="fade-up" class="md:self-stretch">
+        <div data-aos="fade-up" class="hidden sm:block md:self-stretch">
           <img
             src="/portfolio.png"
             alt="Seedling being held"
@@ -270,11 +270,11 @@
         <div
           ref="scroll"
           data-aos="fade-up"
-          class="flex gap-4 max-sm:flex-col overflow-x-auto scrollbar-hide text-white"
+          class="flex gap-4 overflow-x-auto scrollbar-hide text-white"
         >
           <!--Ports & Maritime-->
           <div
-            class="bg-[url('/1.png')] bg-cover bg-center h-87.5 px-4 pt-48 pb-6 flex flex-col justify-start gap-2.5 rounded-2xl sm:w-80 shrink-0"
+            class="bg-[url('/1.png')] bg-cover bg-center h-87.5 px-4 pt-48 pb-6 flex flex-col justify-start gap-2.5 rounded-2xl sm:w-80 w-60 shrink-0"
           >
             <p class="text-lg font-bold">Ports & Maritime</p>
             <p class="leading-5.5">
@@ -285,7 +285,7 @@
 
           <!--Government & Critical Infrastructure-->
           <div
-            class="bg-[url('/2.png')] bg-cover bg-center h-87.5 px-4 pt-48 pb-6 flex flex-col justify-start gap-2.5 rounded-2xl sm:w-80 shrink-0"
+            class="bg-[url('/2.png')] bg-cover bg-center h-87.5 px-4 pt-48 pb-6 flex flex-col justify-start gap-2.5 rounded-2xl sm:w-80 w-60 shrink-0"
           >
             <p class="text-lg font-bold">
               Government & Critical Infrastructure
@@ -298,7 +298,7 @@
 
           <!--Customs & Trade-->
           <div
-            class="bg-[url('/3.png')] bg-cover bg-center h-87.5 px-4 pt-48 pb-6 flex flex-col justify-start gap-2.5 rounded-2xl sm:w-80 shrink-0"
+            class="bg-[url('/3.png')] bg-cover bg-center h-87.5 px-4 pt-48 pb-6 flex flex-col justify-start gap-2.5 rounded-2xl sm:w-80 w-60 shrink-0"
           >
             <p class="text-lg font-bold">Customs & Trade</p>
             <p class="leading-5.5">
@@ -309,7 +309,7 @@
 
           <!--Airports-->
           <div
-            class="bg-[url('/4.png')] bg-cover bg-center h-87.5 px-4 pt-48 pb-6 flex flex-col justify-start gap-2.5 rounded-2xl sm:w-80 shrink-0"
+            class="bg-[url('/4.png')] bg-cover bg-center h-87.5 px-4 pt-48 pb-6 flex flex-col justify-start gap-2.5 rounded-2xl sm:w-80 w-60 shrink-0"
           >
             <p class="text-lg font-bold">Airports</p>
             <p class="leading-5.5">
@@ -320,7 +320,7 @@
 
           <!--Customs & Trade-->
           <div
-            class="bg-[url('/5.png')] bg-cover bg-center h-87.5 px-4 pt-48 pb-6 flex flex-col justify-start gap-2.5 rounded-2xl sm:w-80 shrink-0"
+            class="bg-[url('/5.png')] bg-cover bg-center h-87.5 px-4 pt-48 pb-6 flex flex-col justify-start gap-2.5 rounded-2xl sm:w-80 w-60 shrink-0"
           >
             <p class="text-lg font-bold">Customs & Trade</p>
             <p class="leading-5.5">
@@ -331,7 +331,7 @@
 
           <!--Defence & Security -->
           <div
-            class="bg-[url('/6.png')] bg-cover bg-center h-87.5 px-4 pt-48 pb-6 flex flex-col justify-start gap-2.5 rounded-2xl sm:w-80 shrink-0"
+            class="bg-[url('/6.png')] bg-cover bg-center h-87.5 px-4 pt-48 pb-6 flex flex-col justify-start gap-2.5 rounded-2xl sm:w-80 w-60 shrink-0"
           >
             <p class="text-lg font-bold">Defence & Security </p>
             <p class="leading-5.5">
@@ -343,7 +343,7 @@
 
         <!--Scroll hint-->
         <div
-          class="rounded-r-2xl overflow-hidden hidden sm:block pointer-events-none absolute inset-y-0 right-0 w-24 bg-linear-to-l from-black/40 to-transparent"
+          class="rounded-r-2xl overflow-hidden pointer-events-none absolute inset-y-0 right-0 w-24 bg-linear-to-l from-black/40 to-transparent"
         ></div>
         <button
           type="button"

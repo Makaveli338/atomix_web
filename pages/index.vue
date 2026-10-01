@@ -55,7 +55,7 @@
             </p>
           </div>
 
-          <NuxtLink to="/about" class="primary-btn !py-2">
+          <button type="button" class="primary-btn !py-2">
             More About Us
             <div class="text-accent">
               <svg
@@ -75,7 +75,7 @@
                 />
               </svg>
             </div>
-          </NuxtLink>
+          </button>
         </div>
       </div>
     </section>
@@ -220,7 +220,7 @@
         </div>
       </div>
 
-      <NuxtLink to="/about" class="primary-btn !py-2 mx-auto mt-2.5!">
+      <button type="button" class="primary-btn !py-2 mx-auto mt-2.5!">
         More About Us
         <div class="text-accent">
           <svg
@@ -240,7 +240,7 @@
             />
           </svg>
         </div>
-      </NuxtLink>
+      </button>
     </div>
 
     <!--Securing critical points-->

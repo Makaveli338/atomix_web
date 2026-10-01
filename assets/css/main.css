@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800p');
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+
+@theme {
+    --color-main: #263746;
+    --color-primary: #0568C4;
+    --color-accent: #F2A93B;
+    --color-accent-blue: #078AF4;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+}
+
+body {
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #0568C4;
+    border-radius: 10px;
+}
+
+.scrollbar-hide {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+@layer components {
+
+    /* Button Components */
+    .primary-btn {
+        @apply bg-accent w-fit cursor-pointer px-4 py-3 rounded-full font-semibold hover:bg-accent/70 text-white flex gap-1.5 items-center;
+    }
+
+    .outlined-btn {
+        @apply w-fit border border-[#256E37] bg-white pr-2.5 pl-4 cursor-pointer py-2 rounded-full font-medium hover:bg-[#256E37]/10 transition-colors text-[#256E37] flex items-center gap-2.5;
+    }
+
+    .outlined-btn>svg,
+    .primary-btn>div {
+        @apply transition-transform duration-200;
+    }
+
+    .outlined-btn:hover>svg,
+    .primary-btn:hover>div {
+        @apply translate-x-0.5 -translate-y-0.5;
+    }
+
+    .primary-badge {
+        @apply w-fit rounded-full font-medium px-5 py-2 bg-[#E2F3E5] text-[#3E9B50]
+    }
+
+    .section {
+        @apply max-w-7xl mx-auto px-6
+    }
+}
+
+@utility flex-center {
+    @apply flex items-center justify-center;
+}
+
+@keyframes bounce-x {
+
+    0%,
+    100% {
+        transform: translateX(0) translateY(-50%);
+    }
+
+    50% {
+        transform: translateX(-25%) translateY(-50%);
+    }
+}
+
+@utility animate-bounce-x {
+    animation: bounce-x 1s infinite;
+}
+
+/* AOS is disabled below the sm breakpoint (phones) (see plugins/aos.client.ts) */
+@media (max-width: 639px) {
+    [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+        pointer-events: auto !important;
+    }
+}
+
+.nav-link {
+    position: relative;
+    transition: color 0.2s ease;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+}
+
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.25s ease;
+}
+
+.nav-link:hover {
+    color: var(--color-primary);
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.nav-link-active {
+    color: var(--color-primary);
+}
+
+.nav-link-active::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}

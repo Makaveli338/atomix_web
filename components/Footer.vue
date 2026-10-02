@@ -21,15 +21,13 @@
 
           <div class="flex gap-4">
             <p class="text-lg font-medium">Email:</p>
-            <button type="button"
-              class="cursor-pointer relative inline-block no-underline w-fit after:content-[''] after:absolute after:w-full after:scale-x-0 after:rounded after:h-[0.05em] after:bottom-0 after:left-0 after:bg-current after:origin-bottom-right after:transition-transform after:duration-200 after:ease-out hover:after:scale-x-100 hover:after:origin-bottom-left"
-              >info@atomix.co.ke</button>
+            <a href="mailto:info@atomix.co.ke"
+              class="cursor-pointer relative inline-block no-underline w-fit after:content-[''] after:absolute after:w-full after:scale-x-0 after:rounded after:h-[0.05em] after:bottom-0 after:left-0 after:bg-current after:origin-bottom-right after:transition-transform after:duration-200 after:ease-out hover:after:scale-x-100 hover:after:origin-bottom-left">info@atomix.co.ke</a>
           </div>
           <div class="flex gap-4">
             <p class="text-lg font-medium">Phone:</p>
-            <button type="button"
-              class="cursor-pointer relative inline-block no-underline w-fit after:content-[''] after:absolute after:w-full after:scale-x-0 after:rounded after:h-[0.05em] after:bottom-0 after:left-0 after:bg-current after:origin-bottom-right after:transition-transform after:duration-200 after:ease-out hover:after:scale-x-100 hover:after:origin-bottom-left"
-              >+254 784 000 000</button>
+            <a href="tel:+254784000000"
+              class="cursor-pointer relative inline-block no-underline w-fit after:content-[''] after:absolute after:w-full after:scale-x-0 after:rounded after:h-[0.05em] after:bottom-0 after:left-0 after:bg-current after:origin-bottom-right after:transition-transform after:duration-200 after:ease-out hover:after:scale-x-100 hover:after:origin-bottom-left">+254 784 000 000</a>
           </div>
         </div>
 
@@ -38,13 +36,10 @@
           <p class="text-xl font-semibold">Quick Links</p>
 
           <div class="flex gap-4 text-xl font-light">
-            <button type="button" class="nav-link">Home</button>
-            <button type="button"
-              class="nav-link">About Us</button>
-            <button type="button"
-              class="nav-link">Products</button>
-            <button type="button"
-              class="nav-link">Contact Us</button>
+            <NuxtLink to="/" exact-active-class="nav-link-active" class="nav-link">Home</NuxtLink>
+            <NuxtLink to="/about" active-class="nav-link-active" class="nav-link">About Us</NuxtLink>
+            <NuxtLink to="/products" active-class="nav-link-active" class="nav-link">Products</NuxtLink>
+            <NuxtLink to="/contacts" active-class="nav-link-active" class="nav-link">Contact Us</NuxtLink>
           </div>
         </div>
       </div>
@@ -62,3 +57,4 @@
     </div>
   </section>
 </template>
+

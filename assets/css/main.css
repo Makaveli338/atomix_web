@@ -17,6 +17,7 @@ html {
 body {
     font-family: "Manrope", sans-serif;
     font-optical-sizing: auto;
+    background-color: #F3F8FB;
 }
 
 ::-webkit-scrollbar {

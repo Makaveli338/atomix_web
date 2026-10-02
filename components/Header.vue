@@ -6,18 +6,14 @@
 
       <!--Nav links-->
       <div class="hidden lg:flex gap-6 items-center text-lg">
-        <button type="button"
-          class="nav-link font-semibold">Home</button>
-        <button type="button"
-          class="nav-link font-medium">Products</button>
-        <button type="button"
-          class="nav-link font-medium">About Us</button>
-        <button type="button"
-          class="nav-link font-medium">Contacts</button>
+        <NuxtLink to="/" exact-active-class="nav-link-active" class="nav-link font-semibold">Home</NuxtLink>
+        <NuxtLink to="/products" active-class="nav-link-active" class="nav-link font-medium">Products</NuxtLink>
+        <NuxtLink to="/about" active-class="nav-link-active" class="nav-link font-medium">About Us</NuxtLink>
+        <NuxtLink to="/contacts" active-class="nav-link-active" class="nav-link font-medium">Contacts</NuxtLink>
       </div>
 
       <!--Contact us btn-->
-      <button type="button" class="primary-btn max-lg:hidden">Talk to Us</button>
+      <NuxtLink to="/contacts" class="primary-btn max-lg:hidden">Talk to Us</NuxtLink>
       <button
         @click="isOpen = !isOpen"
         class="block lg:hidden rounded-md p-2 text-white"
@@ -74,19 +70,14 @@
         </div>
 
         <nav class="flex flex-col gap-1 pt-3 text-lg">
-          <button type="button"
-            class="nav-link w-fit py-2 font-semibold" @click="isOpen = false">Home</button>
-          <button type="button"
-            class="nav-link w-fit py-2 font-medium" @click="isOpen = false">About Us</button>
-          <button type="button"
-            class="nav-link w-fit py-2 font-medium" @click="isOpen = false">Products</button>
-          <button type="button"
-            class="nav-link w-fit py-2 font-medium" @click="isOpen = false">Gallery</button>
+          <NuxtLink to="/" exact-active-class="nav-link-active" class="nav-link w-fit py-2 font-semibold" @click="isOpen = false">Home</NuxtLink>
+          <NuxtLink to="/about" active-class="nav-link-active" class="nav-link w-fit py-2 font-medium" @click="isOpen = false">About Us</NuxtLink>
+          <NuxtLink to="/products" active-class="nav-link-active" class="nav-link w-fit py-2 font-medium" @click="isOpen = false">Products</NuxtLink>
+          <NuxtLink to="/gallery" active-class="nav-link-active" class="nav-link w-fit py-2 font-medium" @click="isOpen = false">Gallery</NuxtLink>
         </nav>
 
         <div class="mt-auto">
-          <button type="button"
-            class="primary-btn w-full justify-center" @click="isOpen = false">Contact Us</button>
+          <NuxtLink to="/contacts" class="primary-btn w-full justify-center" @click="isOpen = false">Contact Us</NuxtLink>
         </div>
       </div>
     </div>

@@ -103,6 +103,7 @@ body {
     transition: color 0.2s ease;
     cursor: pointer;
     letter-spacing: 0.5px;
+    font-weight: 500;
 }
 
 
@@ -119,17 +120,13 @@ body {
     transition: transform 0.25s ease;
 }
 
-.nav-link:hover {
-    color: var(--color-primary);
-}
-
 .nav-link:hover::after {
     transform: scaleX(1);
     transform-origin: left;
 }
 
 .nav-link-active {
-    color: var(--color-primary);
+    font-weight: 600 !important;
 }
 
 .nav-link-active::after {

@@ -73,7 +73,6 @@
           <NuxtLink to="/" exact-active-class="nav-link-active" class="nav-link w-fit py-2 font-semibold" @click="isOpen = false">Home</NuxtLink>
           <NuxtLink to="/about" active-class="nav-link-active" class="nav-link w-fit py-2 font-medium" @click="isOpen = false">About Us</NuxtLink>
           <NuxtLink to="/products" active-class="nav-link-active" class="nav-link w-fit py-2 font-medium" @click="isOpen = false">Products</NuxtLink>
-          <NuxtLink to="/gallery" active-class="nav-link-active" class="nav-link w-fit py-2 font-medium" @click="isOpen = false">Gallery</NuxtLink>
         </nav>
 
         <div class="mt-auto">

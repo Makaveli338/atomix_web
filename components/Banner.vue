@@ -3,7 +3,7 @@
     <div
       class="section bg-[url('/security.png')] bg-cover bg-center text-white py-15 sm:py-29.25 pl-12 rounded-2xl space-y-7.5"
     >
-      <div class="space-y-2.5">
+      <div data-aos="fade-right" class="space-y-2.5">
         <p class="font-bold text-3xl sm:text-5xl">
           Ready to <span class="text-accent">Strengthen</span> Your Security?
         </p>
@@ -14,7 +14,7 @@
         </p>
       </div>
 
-      <NuxtLink to="/contacts" class="primary-btn !py-2">
+      <NuxtLink data-aos="fade-right" to="/contacts" class="primary-btn !py-2">
         Contact Us
         <div class="text-accent">
           <svg

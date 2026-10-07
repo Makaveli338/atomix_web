@@ -243,7 +243,7 @@ const interest = ref("");
 const interests = [
   "Radiation detection",
   "Cargo and vehicle inspection",
-  "Baggage and parcel inspection",
+  "CBRN detection and response",
   "Optical inspection technologies",
   "Other",
 ];

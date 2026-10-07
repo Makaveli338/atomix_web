@@ -37,8 +37,8 @@
 
           <div class="flex gap-4 text-xl font-light">
             <NuxtLink to="/" exact-active-class="nav-link-active" class="nav-link">Home</NuxtLink>
-            <NuxtLink to="/about" active-class="nav-link-active" class="nav-link">About Us</NuxtLink>
             <NuxtLink to="/products" active-class="nav-link-active" class="nav-link">Products</NuxtLink>
+            <NuxtLink to="/about" active-class="nav-link-active" class="nav-link">About Us</NuxtLink>
             <NuxtLink to="/contacts" active-class="nav-link-active" class="nav-link">Contact Us</NuxtLink>
           </div>
         </div>

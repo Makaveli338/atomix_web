@@ -11,7 +11,7 @@
     <div class="space-y-10 section mx-auto">
       <!--Heading-->
       <div class="space-y-5">
-        <div class="flex gap-2.5 items-center text-accent">
+        <div data-aos="fade-right" class="flex gap-2.5 items-center text-accent">
           <div class="bg-current h-0.75 w-7.5"></div>
           <p class="text-lg font-semibold">About Atomix Systems</p>
         </div>
@@ -19,12 +19,12 @@
         <div
           class="flex items-start justify-between flex-col lg:flex-row gap-3"
         >
-          <p class="text-[40px] font-bold text-main">
+          <p data-aos="fade-right" class="text-[40px] font-bold text-main">
             Built in <span class="text-primary"> Kenya.</span> <br />
             Serving a <span class="text-primary"> Wider World.</span>
           </p>
 
-          <div class="space-y-6 max-w-2xl text-lg font-light text-main">
+          <div data-aos="fade-left" class="space-y-6 max-w-2xl text-lg font-light text-main">
             <div class="space-y-2.5">
               <p>
                 Atomix Systems is a Kenyan security technology and inspection
@@ -54,7 +54,7 @@
 
       <!--Body-->
       <div class="flex gap-8 max-sm:flex-col">
-        <div class="space-y-1.5 lg:w-[70%]">
+        <div data-aos="fade-right" class="space-y-1.5 lg:w-[70%]">
           <div
             class="rounded-2xl py-10 px-6 bg-[#D6E8FA] space-y-5 sm:space-y-10 w-full"
           >
@@ -80,7 +80,7 @@
           </div>
         </div>
 
-        <img src="/mission.png" alt="security personnel on computer" class="hidden lg:block" />
+        <img data-aos="fade-left" src="/mission.png" alt="security personnel on computer" class="hidden lg:block" />
       </div> 
     </div>
 
@@ -88,18 +88,18 @@
     <div class="space-y-7.5 section">
       <!--Heading-->
       <div class="space-y-1.5">
-        <div class="flex gap-2.5 items-center text-accent">
+        <div data-aos="fade-right" class="flex gap-2.5 items-center text-accent">
           <div class="bg-current h-0.75 w-7.5"></div>
           <p class="text-lg font-semibold">Where we operate</p>
         </div>
 
         <div class="flex max-lg:flex-col gap-3 justify-between">
-          <p class="text-[40px] font-bold text-main max-w-lg">
+          <p data-aos="fade-right" class="text-[40px] font-bold text-main max-w-lg">
             Security Solutions for the
             <span class="text-primary">Real World</span>
           </p>
 
-          <p class="text-lg font-light leading-7.5 text-main max-w-xl">
+          <p data-aos="fade-left" class="text-lg font-light leading-7.5 text-main max-w-xl">
             From international ports and land borders to airports and critical
             infrastructure, Atomix Systems delivers technologies curated around
             the security requirements of demanding environments.
@@ -108,7 +108,7 @@
       </div>
 
       <!--Body-->
-      <div class="space-y-4">
+      <div data-aos="fade-up" class="space-y-4">
         <div class="grid grid-cols-12 gap-3">
           <div
             class="col-span-full md:col-span-6 lg:col-span-3 p-6 rounded-xl bg-[#5599DD] gap-2 flex flex-col h-full justify-end text-white"
@@ -190,7 +190,7 @@
     <!--Our Approach-->
     <div class="w-full bg-[#10304C] space-y-10 py-16 text-white px-6">
       <!--Heading-->
-      <div class="space-y-2 text-center">
+      <div data-aos="fade-up" class="space-y-2 text-center">
         <p class="text-4xl font-semibold text-accent">
           Our <span class="text-accent-blue">Approach</span>
         </p>
@@ -202,9 +202,9 @@
       </div>
 
       <!--Body-->
-      <div class="max-w-2xl mx-auto space-y-5">
+      <div  class="max-w-2xl mx-auto space-y-5">
         <!--Assess-->
-        <div class="flex gap-7.5 sm:items-center sm:w-[80%] max-sm:flex-col">
+        <div data-aos="fade-right" class="flex gap-7.5 sm:items-center sm:w-[80%] max-sm:flex-col">
           <img src="/assess.svg" alt="Assessing img" class="w-fit" />
           <div class="space-y-2">
             <p class="text-accent-blue text-lg font-bold">1. Assess</p>
@@ -217,9 +217,9 @@
 
         <!--Design-->
         <div class="flex gap-7.5 ml-auto sm:sm:w-[80%]">
-          <img src="/arrow-right.svg" alt="arrow" class="max-sm:hidden" />
+          <img data-aos="fade-right" src="/arrow-right.svg" alt="arrow" class="max-sm:hidden" />
 
-          <div class="flex gap-7.5 sm:items-center mt-15 max-sm:flex-col">
+          <div data-aos="fade-left" class="flex gap-7.5 sm:items-center mt-15 max-sm:flex-col">
             <img src="/design.svg" alt="Designing img" class="w-fit" />
             <div class="space-y-2">
               <p class="text-accent-blue text-lg font-bold">2. Design</p>
@@ -233,7 +233,7 @@
 
         <!--Deploy-->
         <div class="flex gap-7.5 mr-auto sm:w-[80%]">
-          <div class="flex gap-7.5 max-sm:flex-col sm:items-center mt-15">
+          <div data-aos="fade-right" class="flex gap-7.5 max-sm:flex-col sm:items-center mt-15">
             <img src="/deploy.svg" alt="Deploying img" class="w-fit" />
             <div class="space-y-2">
               <p class="text-accent-blue text-lg font-bold">3. Deploy</p>
@@ -243,14 +243,14 @@
               </p>
             </div>
           </div>
-          <img src="/arrow-left.svg" alt="arrow" class="max-sm:hidden" />
+          <img data-aos="fade-left" src="/arrow-left.svg" alt="arrow" class="max-sm:hidden" />
         </div>
 
         <!--Maintain-->
         <div class="flex gap-7.5 ml-auto sm:w-[80%]">
-          <img src="/arrow-right.svg" alt="arrow" class="max-sm:hidden" />
+          <img data-aos="fade-right" src="/arrow-right.svg" alt="arrow" class="max-sm:hidden" />
 
-          <div class="flex gap-7.5 sm:items-center max-sm:flex-col mt-15">
+          <div data-aos="fade-left" class="flex gap-7.5 sm:items-center max-sm:flex-col mt-15">
             <img src="/maintain.svg" alt="Maintainance img" class="w-fit" />
             <div class="space-y-2">
               <p class="text-accent-blue text-lg font-bold">4. Maintain</p>
@@ -265,7 +265,7 @@
     </div>
 
     <!--Our Partners-->
-    <div class="mt-7.5 section space-y-11">
+    <div data-aos="fade-up" class="mt-7.5 section space-y-11">
       <!--Heading-->
       <div class="space-y-2 text-center">
         <p class="text-4xl font-semibold text-accent">
@@ -341,11 +341,11 @@
     </div>
 
     <!--Strengthen your Security-->
-    <div class="mt-7.5">
+    <div data-aos="fade-up" class="mt-7.5">
       <Banner />
     </div>
 
-     <section>
+     <section data-aos="fade-up">
       <Footer />
      </section>
   </main>

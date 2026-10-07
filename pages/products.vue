@@ -8,7 +8,7 @@
     </section>
 
     <!--Our products-->
-    <section class="space-y-6 max-w-6xl mx-auto">
+    <section class="space-y-6 max-w-6xl mx-auto px-4">
       <div class="space-y-1.5">
         <div class="text-center">
           <div class="flex gap-2.5 items-center text-accent w-fit mx-auto">
@@ -34,10 +34,12 @@
       >
         <p class="text-lg font-medium text-main">Find Your Perfect Product</p>
 
-        <div class="flex gap-8">
-          <div class="flex gap-2.5 whitespace-nowrap">
+        <div class="flex gap-8 max-sm:flex-col">
+          <div class="flex gap-4 sm:gap-2.5 whitespace-nowrap max-sm:flex-col">
             <!--Industry-->
-            <div class="flex gap-2.5 items-center">
+            <div
+              class="flex gap-2.5 sm:items-center max-sm:flex-col max-sm:text-start"
+            >
               <label for="industry" class="text-main leading-5"
                 >I work in</label
               >
@@ -58,7 +60,9 @@
             </div>
 
             <!--Product-->
-            <div class="flex gap-2.5 items-center">
+            <div
+              class="flex gap-2.5 sm:items-center max-sm:flex-col max-sm:text-start"
+            >
               <label for="product" class="text-main leading-5"
                 >and I am looking for</label
               >
@@ -92,9 +96,10 @@
 
     <!--Radiation detection-->
     <section
+      data-aos="fade-right"
       id="radiation-detection"
       :class="{ 'ring-2 ring-accent': highlighted === 'radiation-detection' }"
-      class="scroll-mt-6 section flex sm:!px-0 rounded-2xl bg-white overflow-hidden"
+      class="scroll-mt-6 section flex sm:!px-0 rounded-2xl bg-white overflow-hidden max-sm:py-4 max-sm:mx-2"
     >
       <div class="w-250 max-sm:hidden">
         <img
@@ -181,9 +186,12 @@
 
     <!--Cargo & vehicle inspection-->
     <section
+      data-aos="fade-left"
       id="cargo-vehicle-inspection"
-      :class="{ 'ring-2 ring-accent': highlighted === 'cargo-vehicle-inspection' }"
-      class="scroll-mt-6 section flex flex-row-reverse sm:!px-0 rounded-2xl bg-white overflow-hidden"
+      :class="{
+        'ring-2 ring-accent': highlighted === 'cargo-vehicle-inspection',
+      }"
+      class="scroll-mt-6 section flex flex-row-reverse sm:!px-0 rounded-2xl bg-white overflow-hidden max-sm:py-4 max-sm:mx-2"
     >
       <div class="w-250 max-sm:hidden">
         <img
@@ -247,39 +255,89 @@
       </div>
     </section>
 
-    <!--Baggage & parcel inspection-->
+    <!--CBRN detection & response-->
     <section
-      id="baggage-parcel-inspection"
-      :class="{ 'ring-2 ring-accent': highlighted === 'baggage-parcel-inspection' }"
-      class="scroll-mt-6 section flex sm:!px-0 rounded-2xl bg-white overflow-hidden"
+      data-aos="fade-right"
+      id="cbrn-detection"
+      :class="{ 'ring-2 ring-accent': highlighted === 'cbrn-detection' }"
+      class="scroll-mt-6 section flex sm:!px-0 rounded-2xl bg-white overflow-hidden max-sm:py-4 max-sm:mx-2"
     >
       <div class="w-250 max-sm:hidden">
         <img
-          src="/baggage-inspection.png"
-          alt="Baggage and parcel inspection img"
+          src="/cbrn-detection.png"
+          alt="CBRN Detection and Response img"
           class="h-full w-full object-cover"
         />
       </div>
 
-      <div class="sm:p-8 space-y-4 text-[#6B7C8A] flex flex-col justify-center">
+      <div class="sm:p-8 space-y-4 text-[#6B7C8A]">
         <p class="text-primary text-2xl font-semibold">
-          Baggage & Parcel Inspection
+          CBRN Detection & Response
         </p>
 
         <div class="space-y-2.5">
           <p>
-            Baggage, parcels and packages move through high-volume environments
-            every day. Effective inspection technologies help security teams
-            identify potential risks while supporting efficient operations.
+            Chemical, Biological, Radiological and Nuclear threats require
+            advanced detection capabilities and a coordinated approach to
+            security.
           </p>
           <p>
-            Our inspection solutions are designed for baggage and parcel
-            screening environments.
+            Atomix Systems provides CBRN detection and sensing solutions
+            designed to help organisations identify potential threats,
+            strengthen situational awareness and support effective response
+            across critical environments.
+          </p>
+          <p>
+            Our portfolio includes solutions for chemical, biological and
+            radiological/nuclear threat detection, with capabilities available
+            across mobile, fixed and integrated systems.
           </p>
         </div>
 
+        <div class="space-y-2.5">
+          <div class="space-y-1.5">
+            <p class="pl-2 font-semibold text-main">1. Chemical Detection</p>
+            <p>
+              Advanced sensing technologies designed to support the detection
+              and identification of potential chemical threats, helping security
+              teams improve awareness in high-risk environments.
+            </p>
+          </div>
+
+          <div class="space-y-1.5">
+            <p class="pl-2 font-semibold text-main">2. Biological Detection</p>
+            <p>
+              Detection and monitoring solutions designed to support the
+              identification of potential biological threats and strengthen CBRN
+              situational awareness.
+            </p>
+          </div>
+
+          <div class="space-y-1.5">
+            <p class="pl-2 font-semibold text-main">
+              3. Radiological & Nuclear Detection
+            </p>
+            <p>
+              Advanced radiation detection technologies designed to identify
+              potential radiological and nuclear threats across ports, borders,
+              critical infrastructure and other strategic locations.
+            </p>
+          </div>
+
+          <div class="space-y-1.5">
+            <p class="pl-2 font-semibold text-main">
+              4. Integrated CBRN Systems
+            </p>
+            <p>
+              Connected detection and sensing technologies designed to bring
+              multiple capabilities together, enabling a more comprehensive
+              approach to threat monitoring and situational awareness.
+            </p>
+          </div>
+        </div>
+
         <button class="primary-btn !py-2 w-fit">
-          View Baggage & Parcel Inspection Products
+          View CBRN Detection & Response Products
           <div class="text-accent">
             <svg
               width="24"
@@ -304,9 +362,10 @@
 
     <!--Optical inspection-->
     <section
+      data-aos="fade-left"
       id="optical-inspection"
       :class="{ 'ring-2 ring-accent': highlighted === 'optical-inspection' }"
-      class="scroll-mt-6 section flex flex-row-reverse sm:!px-0 rounded-2xl bg-white overflow-hidden"
+      class="scroll-mt-6 section flex flex-row-reverse sm:!px-0 rounded-2xl bg-white overflow-hidden max-sm:py-4 max-sm:mx-2"
     >
       <div class="w-250 max-sm:hidden">
         <img
@@ -364,9 +423,11 @@
     </section>
 
     <!--Strengthen your Security-->
-    <Banner />
+    <div data-aos="fade-up">
+      <Banner />
+    </div>
 
-    <section>
+    <section data-aos="fade-up">
       <Footer />
     </section>
   </main>
@@ -433,7 +494,7 @@ const highlighted = ref("");
 const sectionIds: Record<string, string> = {
   "Radiation detection": "radiation-detection",
   "Cargo and vehicle inspection": "cargo-vehicle-inspection",
-  "Baggage and parcel inspection": "baggage-parcel-inspection",
+  "CBRN detection and response": "cbrn-detection",
   "Optical inspection technologies": "optical-inspection",
 };
 
@@ -442,11 +503,11 @@ const industryProducts: Record<string, string[]> = {
   "Border security & customs": [
     "Cargo and vehicle inspection",
     "Radiation detection",
-    "Baggage and parcel inspection",
+    "CBRN detection and response",
     "Optical inspection technologies",
   ],
   "Airports & aviation": [
-    "Baggage and parcel inspection",
+    "CBRN detection and response",
     "Radiation detection",
     "Optical inspection technologies",
   ],
@@ -456,24 +517,21 @@ const industryProducts: Record<string, string[]> = {
     "Optical inspection technologies",
   ],
   "Government & public security": [
-    "Baggage and parcel inspection",
+    "CBRN detection and response",
     "Radiation detection",
     "Optical inspection technologies",
   ],
   "Law enforcement": [
     "Radiation detection",
     "Optical inspection technologies",
-    "Baggage and parcel inspection",
+    "CBRN detection and response",
   ],
   "Military & defense": [
     "Radiation detection",
     "Cargo and vehicle inspection",
     "Optical inspection technologies",
   ],
-  "Nuclear & energy": [
-    "Radiation detection",
-    "Cargo and vehicle inspection",
-  ],
+  "Nuclear & energy": ["Radiation detection", "Cargo and vehicle inspection"],
   "Critical infrastructure": [
     "Optical inspection technologies",
     "Cargo and vehicle inspection",
@@ -520,5 +578,4 @@ const industries = [
   "Critical infrastructure",
   "Other",
 ];
-
 </script>

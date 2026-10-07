@@ -4,7 +4,10 @@
     <section class="bg-[url('/hero.png')] bg-cover bg-center text-white">
       <Header />
 
-      <div class="py-15 lg:pt-42.5 lg:pb-62.25 px-4 lg:px-0">
+      <div
+        data-aos="fade-right"
+        class="py-15 lg:pt-42.5 lg:pb-62.25 px-4 lg:px-0"
+      >
         <div class="max-w-5xl mx-auto">
           <i class="text-3xl sm:text-6xl font-semibold ml-auto">
             <span class="text-accent"> Detect</span> threats.
@@ -23,18 +26,21 @@
     <!--About Atomix systems-->
     <section class="space-y-2 section mx-auto">
       <!--Heading-->
-      <div class="flex gap-2.5 items-center text-accent">
+      <div data-aos="fade-right" class="flex gap-2.5 items-center text-accent">
         <div class="bg-current h-0.75 w-7.5"></div>
         <p class="text-lg font-semibold">About Atomix Systems</p>
       </div>
 
       <div class="flex items-start justify-between flex-col lg:flex-row gap-3">
-        <p class="text-[40px] font-bold text-main">
+        <p data-aos="fade-right" class="text-[40px] font-bold text-main">
           Safer <span class="text-primary"> today,</span> <br />
           Secure <span class="text-primary">tomorrow</span>
         </p>
 
-        <div class="space-y-6 max-w-2xl text-lg font-light text-main">
+        <div
+          data-aos="fade-left"
+          class="space-y-6 max-w-2xl text-lg font-light text-main"
+        >
           <div class="space-y-2.5">
             <p>
               Atomix Systems provides specialized security and inspection
@@ -83,7 +89,7 @@
     <!--Core Solutions-->
     <div class="space-y-7.5 section">
       <!--Heading-->
-      <div class="space-y-1.5">
+      <div data-aos="fade-right" class="space-y-1.5">
         <div class="flex gap-2.5 items-center text-accent">
           <div class="bg-current h-0.75 w-7.5"></div>
           <p class="text-lg font-semibold">Core Solutions</p>
@@ -98,6 +104,7 @@
       <div class="grid sm:grid-cols-12 gap-3">
         <!--Detect-->
         <div
+          data-aos="fade-right"
           class="sm:col-span-5 bg-[#D3E6F8] p-6 h-full rounded-xl gap-12 flex justify-end flex-col"
         >
           <p class="text-3xl font-bold text-primary">Detect</p>
@@ -114,7 +121,7 @@
           </div>
         </div>
 
-        <div class="sm:col-span-7 space-y-3">
+        <div data-aos="fade-left" class="sm:col-span-7 space-y-3">
           <!--Deter-->
           <div
             class="bg-[#D6E8FA] p-6 rounded-xl gap-12 flex justify-end flex-col h-fit"
@@ -158,7 +165,7 @@
     <!--Product Portfolio-->
     <div class="space-y-7.5 section">
       <!--Heading-->
-      <div class="space-y-1.5">
+      <div data-aos="fade-up" class="space-y-1.5">
         <div class="space-y-2 text-center">
           <p class="text-[40px] font-bold text-accent">
             Product <span class="text-primary">Portfolio</span>
@@ -202,11 +209,12 @@
         <div data-aos="fade-left" class="flex flex-col justify-center">
           <div class="p-10 text-left space-y-2">
             <p class="text-lg font-bold text-primary">
-              Baggage & Parcel Inspection
+              CBRN Detection & Response
             </p>
             <p class="leading-6 text-[#5C5C5C] max-w-xs">
-              Inspection solutions designed to support the screening of baggage,
-              parcels and other items in security-sensitive environments. 
+              Identify potential chemical, biological, radiological and nuclear
+              threats, strengthen situational awareness and support informed
+              response.  
             </p>
           </div>
           <div class="p-10 text-left space-y-2">
@@ -220,7 +228,11 @@
         </div>
       </div>
 
-      <NuxtLink to="/about" class="primary-btn !py-2 mx-auto mt-2.5!">
+      <NuxtLink
+        data-aos="fade-up"
+        to="/about"
+        class="primary-btn !py-2 mx-auto mt-2.5!"
+      >
         More About Us
         <div class="text-accent">
           <svg
@@ -247,21 +259,26 @@
     <div class="space-y-10 section">
       <!--Heading-->
       <div class="space-y-1.5">
-        <div class="flex gap-2.5 items-center text-accent">
+        <div
+          data-aos="fade-right"
+          class="flex gap-2.5 items-center text-accent"
+        >
           <div class="bg-current h-0.75 w-7.5"></div>
           <p class="text-lg font-semibold">Where Atomix Systems operates</p>
         </div>
 
         <div class="flex max-lg:flex-col gap-3 justify-between">
-          <p class="text-[40px] font-bold text-main">
+          <p data-aos="fade-right" class="text-[40px] font-bold text-main">
             Securing <span class="text-primary">critical points</span>
           </p>
 
-          <p class="text-lg font-light leading-7.5 text-main max-w-xl">
-            Security challenges differ across environments. Our solutions are
-            deployed in locations where effective inspection, detection and
-            situational awareness are essential.
-          </p>
+          <div data-aos="fade-left">
+            <p class="text-lg font-light leading-7.5 text-main max-w-xl">
+              Security challenges differ across environments. Our solutions are
+              deployed in locations where effective inspection, detection and
+              situational awareness are essential.
+            </p>
+          </div>
         </div>
       </div>
 
@@ -372,7 +389,7 @@
 
     <!--Why choose Atomix Systems-->
     <section class="bg-[url('/map.png')] bg-cover bg-center text-white py-23.5">
-      <div class="space-y-10 section">
+      <div data-aos="fade-up" class="space-y-10 section">
         <!--Heading-->
         <div class="gap-2 text-center flex flex-col items-center">
           <div class="flex gap-2.5 items-center text-accent">
@@ -452,7 +469,7 @@
     </section>
 
     <!--Trusted by...-->
-    <div class="space-y-11 section">
+    <div data-aos="fade-up" class="space-y-11 section">
       <!--Heading-->
       <div class="space-y-2 text-center">
         <p class="text-3xl font-semibold text-primary">
@@ -480,9 +497,11 @@
     </div>
 
     <!--Strengthen your Security-->
-    <Banner />
+    <div data-aos="fade-up">
+      <Banner />
+    </div>
 
-    <section>
+    <section data-aos="fade-up">
       <Footer />
     </section>
   </main>

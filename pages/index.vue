@@ -105,8 +105,10 @@
         <!--Detect-->
         <div
           data-aos="fade-right"
-          class="sm:col-span-5 bg-[#D3E6F8] p-6 h-full rounded-xl gap-12 flex justify-end flex-col"
+          class="sm:col-span-5 bg-[#D3E6F8] h-full rounded-xl gap-12 flex justify-end flex-col relative overflow-hidden"
         >
+        <img src="/mask.svg" alt="" class="absolute right-0 h-full">
+        <div class="max-w-81.25 p-6">
           <p class="text-3xl font-bold text-primary">Detect</p>
 
           <div class="space-y-2 text-main">
@@ -119,6 +121,7 @@
               moving through ports, borders and critical facilities.
             </p>
           </div>
+        </div>
         </div>
 
         <div data-aos="fade-left" class="sm:col-span-7 space-y-3">
@@ -180,7 +183,7 @@
 
       <!--Body-->
       <div class="flex sm:gap-6 max-sm:flex-col">
-        <div data-aos="fade-right" class="flex flex-col justify-center">
+        <div data-aos="fade-right" class="flex flex-col justify-between">
           <div class="p-10 sm:text-right space-y-2">
             <p class="text-lg font-bold text-primary">Radiation Detection</p>
             <p class="leading-6 text-[#6B7C8A] max-w-xs">
@@ -188,7 +191,7 @@
               pedestrian checkpoints and other controlled environments.
             </p>
           </div>
-          <div class="p-10 am:text-right space-y-2">
+          <div class="p-10 sm:text-right space-y-2">
             <p class="text-lg font-bold text-primary">
               Cargo & Vehicle Inspection
             </p>
@@ -206,8 +209,8 @@
             class="w-full h-full object-cover rounded-2xl"
           />
         </div>
-        <div data-aos="fade-left" class="flex flex-col justify-center">
-          <div class="p-10 text-left space-y-2">
+        <div data-aos="fade-left" class="flex flex-col justify-between">
+          <div class="p-10 text-left space-y-2 sm:pt-26.5">
             <p class="text-lg font-bold text-primary">
               CBRN Detection & Response
             </p>
@@ -283,7 +286,7 @@
       </div>
 
       <!--Body-->
-      <div class="relative rounded-2xl overflow-hidden">
+      <div class="xl:-mr-[max(1.5rem,calc((100vw-80rem)/2+1.5rem))] max-w-360 relative rounded-2xl overflow-hidden mr-4">
         <div
           ref="scroll"
           data-aos="fade-up"
@@ -358,7 +361,7 @@
           </div>
         </div>
 
-        <!--Scroll hint-->
+         <!--Scroll hint-->
         <div
           class="rounded-r-2xl overflow-hidden pointer-events-none absolute inset-y-0 right-0 w-24 bg-linear-to-l from-black/40 to-transparent"
         ></div>

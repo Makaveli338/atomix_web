@@ -28,554 +28,474 @@
           modern security operations.
         </p>
       </div>
+    </section>
 
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-5 max-w-6xl mx-auto px-4"
+    >
       <div
-        class="bg-white rounded-2xl py-6 gap-4 flex flex-col items-center text-center"
+        v-for="product in products"
+        :key="product.id"
+        class="group relative bg-white rounded-2xl px-3 pt-3 space-y-7.5 pb-7.5 text-center overflow-hidden cursor-pointer"
       >
-        <p class="text-lg font-medium text-main">Find Your Perfect Product</p>
-
-        <div class="flex gap-8 max-sm:flex-col">
-          <div class="flex gap-4 sm:gap-2.5 whitespace-nowrap max-sm:flex-col">
-            <!--Industry-->
-            <div
-              class="flex gap-2.5 sm:items-center max-sm:flex-col max-sm:text-start"
-            >
-              <label for="industry" class="text-main leading-5"
-                >I work in</label
-              >
-              <select
-                id="industry"
-                v-model="industry"
-                class="w-full border-0 p-3 leading-6 text-[#6B7C8A] outline-none focus:ring-0 border-b border-[#EBEBEB]"
-              >
-                <option value="" disabled>Industry</option>
-                <option
-                  v-for="option in industries"
-                  :key="option"
-                  :value="option"
-                >
-                  {{ option }}
-                </option>
-              </select>
-            </div>
-
-            <!--Product-->
-            <div
-              class="flex gap-2.5 sm:items-center max-sm:flex-col max-sm:text-start"
-            >
-              <label for="product" class="text-main leading-5"
-                >and I am looking for</label
-              >
-              <select
-                id="product"
-                v-model="product"
-                class="w-75 border-0 p-3 leading-6 text-[#6B7C8A] outline-none focus:ring-0 border-b border-[#EBEBEB]"
-              >
-                <option value="" disabled>Product</option>
-                <option
-                  v-for="option in products"
-                  :key="option"
-                  :value="option"
-                >
-                  {{ option }}
-                </option>
-              </select>
-            </div>
-          </div>
-
+        <div
+          class="absolute inset-0 bg-[#00000021] opacity-0 h-full group-hover:opacity-100 transition-opacity duration-300 pointer-events-none flex-center"
+        >
           <button
-            class="primary-btn disabled:opacity-50 disabled:cursor-not-allowed"
-            :disabled="!industry && !product"
-            @click="findProduct"
+            @click="openProduct(product)"
+            class="pointer-events-auto cursor-pointer bg-white flex items-center gap-1.5 px-4 py-2.5 rounded-full"
           >
-            Find Product
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.0004 5C6.8954 5 3.54553 9.50484 2.42012 11.2868C2.28394 11.5025 2.21584 11.6103 2.17772 11.7766C2.14909 11.9015 2.14909 12.0985 2.17772 12.2234C2.21584 12.3897 2.28394 12.4975 2.42012 12.7132C3.54553 14.4952 6.8954 19 12.0004 19C17.1054 19 20.4553 14.4952 21.5807 12.7132C21.7169 12.4975 21.785 12.3897 21.8231 12.2234C21.8517 12.0985 21.8517 11.9015 21.8231 11.7766C21.785 11.6103 21.7169 11.5025 21.5807 11.2868C20.4553 9.50484 17.1054 5 12.0004 5ZM15.0004 12C15.0004 13.6569 13.6573 15 12.0004 15C10.3435 15 9.0004 13.6569 9.0004 12C9.0004 10.3431 10.3435 9 12.0004 9C13.6573 9 15.0004 10.3431 15.0004 12Z"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke="#F2A93B"
+              />
+            </svg>
+            <p class="text-sm font-semibold text-accent">
+              View Product Features
+            </p>
           </button>
         </div>
-      </div>
-    </section>
 
-    <!--Radiation detection-->
-    <section
-      data-aos="fade-right"
-      id="radiation-detection"
-      :class="{ 'ring-2 ring-accent': highlighted === 'radiation-detection' }"
-      class="scroll-mt-6 section flex sm:!px-0 rounded-2xl bg-white overflow-hidden max-sm:py-4 max-sm:mx-2"
-    >
-      <div class="w-250 max-sm:hidden">
-        <img
-          src="/radiation-detection.png"
-          alt="Radiation Detection img"
-          class="h-full"
-        />
-      </div>
-
-      <div class="sm:p-8 space-y-4 text-[#6B7C8A]">
-        <p class="text-primary text-2xl font-semibold">Radiation Detection</p>
-
-        <div class="space-y-2.5">
-          <p>
-            Radioactive materials can present serious security and safety risks
-            when moved through controlled environments without detection.
-          </p>
-          <p>
-            Atomix Systems provides radiation detection technologies designed to
-            identify and monitor radioactive sources across vehicles, cargo,
-            pedestrian checkpoints and other operational environments.
-          </p>
+        <div class="flex-center bg-[#F3F8FB] rounded-[10px] h-60 p-4">
+          <img
+            :src="product.cardImage"
+            :alt="product.name"
+            class="h-full w-full object-contain"
+          />
         </div>
-
-        <div class="space-y-2.5">
-          <div class="space-y-1.5">
-            <p class="pl-2 font-semibold text-main">
-              1. Vehicle Portal Monitors
-            </p>
-            <p>
-              Designed to monitor vehicles as they pass through designated
-              inspection points and identify potential radioactive sources.
-            </p>
-          </div>
-
-          <div class="space-y-1.5">
-            <p class="pl-2 font-semibold text-main">2. Backpack & Field Kits</p>
-            <p>
-              Portable detection technologies designed to support field
-              operations and mobile inspection requirements.
-            </p>
-          </div>
-
-          <div class="space-y-1.5">
-            <p class="pl-2 font-semibold text-main">3. Handheld Monitors</p>
-            <p>
-              Portable devices designed to support targeted radiation detection
-              and field inspection activities.
-            </p>
-          </div>
-
-          <div class="space-y-1.5">
-            <p class="pl-2 font-semibold text-main">4. Mobile Monitors</p>
-            <p>
-              Flexible radiation detection solutions designed for environments
-              where mobility and adaptable deployment are required
-            </p>
-          </div>
-        </div>
-
-        <button class="primary-btn !py-2">
-          View Radiation Detection Products
-          <div class="text-accent">
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect width="24" height="24" rx="12" fill="white" />
-              <path
-                d="M8 16L16 8M16 13.3333V8H10.6667"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </div>
-        </button>
+        <p class="text-primary text-lg font-semibold">{{ product.name }}</p>
       </div>
-    </section>
-
-    <!--Cargo & vehicle inspection-->
-    <section
-      data-aos="fade-left"
-      id="cargo-vehicle-inspection"
-      :class="{
-        'ring-2 ring-accent': highlighted === 'cargo-vehicle-inspection',
-      }"
-      class="scroll-mt-6 section flex flex-row-reverse sm:!px-0 rounded-2xl bg-white overflow-hidden max-sm:py-4 max-sm:mx-2"
-    >
-      <div class="w-250 max-sm:hidden">
-        <img
-          src="/vehicle-inspection.png"
-          alt="Cargo and vehicle inspection img"
-          class="h-full w-full object-cover"
-        />
-      </div>
-
-      <div class="sm:p-8 space-y-4 text-[#6B7C8A]">
-        <p class="text-primary text-2xl font-semibold">
-          Cargo & Vehicle Inspection
-        </p>
-
-        <div class="space-y-2.5">
-          <p>
-            Concealed threats can be difficult to identify through conventional
-            visual inspection. Advanced inspection technologies provide security
-            teams with greater visibility into vehicles, cargo and containers.
-          </p>
-          <p>
-            We provide a range of cargo and vehicle inspection solutions for
-            different operational environments.
-          </p>
-        </div>
-
-        <div class="space-y-2.5">
-          <div
-            v-for="(item, index) in cargoSystems"
-            :key="item.title"
-            class="space-y-1.5"
-          >
-            <p class="pl-2 font-semibold text-main">
-              {{ index + 1 }}. {{ item.title }}
-            </p>
-            <p>{{ item.description }}</p>
-          </div>
-        </div>
-
-        <button class="primary-btn !py-2">
-          View Cargo & Vehicle Inspection Products
-          <div class="text-accent">
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect width="24" height="24" rx="12" fill="white" />
-              <path
-                d="M8 16L16 8M16 13.3333V8H10.6667"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </div>
-        </button>
-      </div>
-    </section>
-
-    <!--CBRN detection & response-->
-    <section
-      data-aos="fade-right"
-      id="cbrn-detection"
-      :class="{ 'ring-2 ring-accent': highlighted === 'cbrn-detection' }"
-      class="scroll-mt-6 section flex sm:!px-0 rounded-2xl bg-white overflow-hidden max-sm:py-4 max-sm:mx-2"
-    >
-      <div class="w-250 max-sm:hidden">
-        <img
-          src="/cbrn-detection.png"
-          alt="CBRN Detection and Response img"
-          class="h-full w-full object-cover"
-        />
-      </div>
-
-      <div class="sm:p-8 space-y-4 text-[#6B7C8A]">
-        <p class="text-primary text-2xl font-semibold">
-          CBRN Detection & Response
-        </p>
-
-        <div class="space-y-2.5">
-          <p>
-            Chemical, Biological, Radiological and Nuclear threats require
-            advanced detection capabilities and a coordinated approach to
-            security.
-          </p>
-          <p>
-            Atomix Systems provides CBRN detection and sensing solutions
-            designed to help organisations identify potential threats,
-            strengthen situational awareness and support effective response
-            across critical environments.
-          </p>
-          <p>
-            Our portfolio includes solutions for chemical, biological and
-            radiological/nuclear threat detection, with capabilities available
-            across mobile, fixed and integrated systems.
-          </p>
-        </div>
-
-        <div class="space-y-2.5">
-          <div class="space-y-1.5">
-            <p class="pl-2 font-semibold text-main">1. Chemical Detection</p>
-            <p>
-              Advanced sensing technologies designed to support the detection
-              and identification of potential chemical threats, helping security
-              teams improve awareness in high-risk environments.
-            </p>
-          </div>
-
-          <div class="space-y-1.5">
-            <p class="pl-2 font-semibold text-main">2. Biological Detection</p>
-            <p>
-              Detection and monitoring solutions designed to support the
-              identification of potential biological threats and strengthen CBRN
-              situational awareness.
-            </p>
-          </div>
-
-          <div class="space-y-1.5">
-            <p class="pl-2 font-semibold text-main">
-              3. Radiological & Nuclear Detection
-            </p>
-            <p>
-              Advanced radiation detection technologies designed to identify
-              potential radiological and nuclear threats across ports, borders,
-              critical infrastructure and other strategic locations.
-            </p>
-          </div>
-
-          <div class="space-y-1.5">
-            <p class="pl-2 font-semibold text-main">
-              4. Integrated CBRN Systems
-            </p>
-            <p>
-              Connected detection and sensing technologies designed to bring
-              multiple capabilities together, enabling a more comprehensive
-              approach to threat monitoring and situational awareness.
-            </p>
-          </div>
-        </div>
-
-        <button class="primary-btn !py-2 w-fit">
-          View CBRN Detection & Response Products
-          <div class="text-accent">
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect width="24" height="24" rx="12" fill="white" />
-              <path
-                d="M8 16L16 8M16 13.3333V8H10.6667"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </div>
-        </button>
-      </div>
-    </section>
-
-    <!--Optical inspection-->
-    <section
-      data-aos="fade-left"
-      id="optical-inspection"
-      :class="{ 'ring-2 ring-accent': highlighted === 'optical-inspection' }"
-      class="scroll-mt-6 section flex flex-row-reverse sm:!px-0 rounded-2xl bg-white overflow-hidden max-sm:py-4 max-sm:mx-2"
-    >
-      <div class="w-250 max-sm:hidden">
-        <img
-          src="/optical-inspection.png"
-          alt="Optical inspection img"
-          class="h-full w-full object-cover"
-        />
-      </div>
-
-      <div class="sm:p-8 space-y-4 text-[#6B7C8A]">
-        <p class="text-primary text-2xl font-semibold">Optical Inspection</p>
-
-        <p>
-          Modern security operations require more than simply seeing what is
-          happening. Optical inspection technologies can help organizations
-          identify vehicles, classify traffic and strengthen situational
-          awareness
-        </p>
-
-        <div class="space-y-2.5">
-          <div
-            v-for="(item, index) in opticalSystems"
-            :key="item.title"
-            class="space-y-1.5"
-          >
-            <p class="pl-2 font-semibold text-main">
-              {{ index + 1 }}. {{ item.title }}
-            </p>
-            <p>{{ item.description }}</p>
-          </div>
-        </div>
-
-        <button class="primary-btn !py-2">
-          View Optical Inspection Products
-          <div class="text-accent">
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect width="24" height="24" rx="12" fill="white" />
-              <path
-                d="M8 16L16 8M16 13.3333V8H10.6667"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </div>
-        </button>
-      </div>
-    </section>
+    </div>
 
     <!--Strengthen your Security-->
-    <div data-aos="fade-up">
+    <div data-aos="fade-up" class="hidden">
       <Banner />
     </div>
 
-    <section data-aos="fade-up">
+    <section data-aos="fade-up" class="hidden">
       <Footer />
     </section>
+
+    <!-- Product modal -->
+    <TransitionRoot appear :show="productOpen" as="template">
+      <Dialog as="div" @close="closeProduct" class="relative z-10">
+        <TransitionChild
+          as="template"
+          enter="duration-300 ease-out"
+          enter-from="opacity-0"
+          enter-to="opacity-100"
+          leave="duration-200 ease-in"
+          leave-from="opacity-100"
+          leave-to="opacity-0"
+        >
+          <div class="fixed inset-0 bg-gray-800/25 backdrop-blur-sm" />
+        </TransitionChild>
+
+        <div class="fixed inset-0 overflow-y-auto">
+          <div
+            class="flex min-h-full items-center justify-center p-4 text-center"
+          >
+            <TransitionChild
+              as="template"
+              enter="duration-300 ease-out"
+              enter-from="opacity-0 scale-95"
+              enter-to="opacity-100 scale-100"
+              leave="duration-200 ease-in"
+              leave-from="opacity-100 scale-100"
+              leave-to="opacity-0 scale-95"
+            >
+              <DialogPanel
+                class="w-full max-w-7xl transform overflow-hidden rounded-lg bg-white p-8 space-y-8 text-left align-middle shadow-xl transition-all"
+              >
+                <DialogTitle
+                  as="h4"
+                  class="text-lg font-semibold leading-none text-slate-600"
+                >
+                  <div class="flex gap-4 sm:items-center justify-between max-sm:flex-col">
+                    <p class="text-2xl font-semibold text-primary w-full">
+                      {{ selected?.name }}
+                    </p>
+
+                    <button
+                      @click="closeProduct"
+                      class="w-fit flex items-center px-4 py-2.5 gap-1.5 bg-[#F3F8FB] hover:bg-[#c5e2f3] rounded-full cursor-pointer"
+                    >
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M14.1654 5.83337L9.9987 10M9.9987 10L5.83203 14.1667M9.9987 10L5.83203 5.83337M9.9987 10L14.1654 14.1667"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke="#263746"
+                        />
+                      </svg>
+                      <p class="text-sm font-semibold text-[#10304C]">Close</p>
+                    </button>
+                  </div>
+                </DialogTitle>
+
+                <div v-if="selected" class="flex gap-6 sm:gap-10 max-sm:flex-col">
+                  <div
+                    class="rounded-[10px] flex-center bg-[#F3F8FB] px-10 py-7.5 w-full h-80 sm:size-115 shrink-0"
+                  >
+                    <div class="relative flex-center w-full h-full">
+                      <img
+                        v-for="(src, i) in selected.slides"
+                        :key="src"
+                        :src="src"
+                        :alt="selected.name"
+                        class="absolute inset-0 m-auto max-h-full max-w-full object-contain transition-opacity duration-500"
+                        :class="i === productSlide ? 'opacity-100' : 'opacity-0'"
+                      />
+
+                      <div
+                        v-if="selected.slides.length > 1"
+                        class="absolute top-full mt-3 flex gap-1.5"
+                      >
+                        <button
+                          v-for="(src, i) in selected.slides"
+                          :key="src"
+                          @click="goToProductSlide(i)"
+                          :aria-label="`Show image ${i + 1}`"
+                          class="cursor-pointer rounded-full size-2.5 transition-colors"
+                          :class="i === productSlide ? 'bg-primary' : 'bg-[#AACEFD]'"
+                        ></button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="space-y-4">
+                    <p v-if="selected.intro" class="text-lg text-[#6B7C8A]">
+                      {{ selected.intro }}
+                    </p>
+
+                    <p class="text-main text-xl font-semibold">Key Features</p>
+
+                    <div class="space-y-2.5">
+                      <div
+                        v-for="(feature, i) in selected.features"
+                        :key="feature.title"
+                        class="space-y-1"
+                      >
+                        <p class="font-semibold text-main">
+                          {{ i + 1 }}. {{ feature.title }}
+                        </p>
+                        <p class="text-[#6B7C8A]">{{ feature.text }}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </DialogPanel>
+            </TransitionChild>
+          </div>
+        </div>
+      </Dialog>
+    </TransitionRoot>
   </main>
 </template>
 
 <script setup lang="ts">
-useHead({ title: "Products" });
+import {
+  TransitionRoot,
+  TransitionChild,
+  Dialog,
+  DialogPanel,
+  DialogTitle,
+} from "@headlessui/vue";
+import { ref, onBeforeUnmount } from "vue";
 
-const cargoSystems = [
-  {
-    title: "Portal Systems",
-    description:
-      "Inspection systems designed for controlled vehicle and cargo screening environments.",
-  },
-  {
-    title: "Trailer Systems",
-    description:
-      "Solutions designed to inspect trailers and larger transport units.",
-  },
-  {
-    title: "Gantry Systems",
-    description:
-      "Large-scale inspection configurations designed for high-throughput cargo and vehicle environments.",
-  },
-  {
-    title: "Mobile Systems",
-    description:
-      "Flexible inspection solutions that can be deployed where and when they are needed.",
-  },
-  {
-    title: "Rail Inspection",
-    description:
-      "Inspection technologies designed for cargo and vehicles transported through rail networks.",
-  },
-  {
-    title: "Pallet Inspection",
-    description:
-      "Solutions designed to support the inspection of palletized cargo.",
-  },
-];
-
-const opticalSystems = [
-  {
-    title: "License Plate Recognition",
-    description:
-      "Technology designed to capture and identify vehicle registration plates for security and monitoring applications.",
-  },
-  {
-    title: "Vehicle Classification",
-    description:
-      "Solutions designed to identify and classify vehicles based on relevant characteristics.",
-  },
-  {
-    title: "Vehicle Monitoring",
-    description:
-      "Technologies designed to support improved visibility of vehicle movements within controlled environments.",
-  },
-];
-
-const industry = ref("");
-const product = ref("");
-const highlighted = ref("");
-
-const sectionIds: Record<string, string> = {
-  "Radiation detection": "radiation-detection",
-  "Cargo and vehicle inspection": "cargo-vehicle-inspection",
-  "CBRN detection and response": "cbrn-detection",
-  "Optical inspection technologies": "optical-inspection",
-};
-
-// Products relevant to each industry; the first is the default landing section
-const industryProducts: Record<string, string[]> = {
-  "Border security & customs": [
-    "Cargo and vehicle inspection",
-    "Radiation detection",
-    "CBRN detection and response",
-    "Optical inspection technologies",
-  ],
-  "Airports & aviation": [
-    "CBRN detection and response",
-    "Radiation detection",
-    "Optical inspection technologies",
-  ],
-  "Seaports & logistics": [
-    "Cargo and vehicle inspection",
-    "Radiation detection",
-    "Optical inspection technologies",
-  ],
-  "Government & public security": [
-    "CBRN detection and response",
-    "Radiation detection",
-    "Optical inspection technologies",
-  ],
-  "Law enforcement": [
-    "Radiation detection",
-    "Optical inspection technologies",
-    "CBRN detection and response",
-  ],
-  "Military & defense": [
-    "Radiation detection",
-    "Cargo and vehicle inspection",
-    "Optical inspection technologies",
-  ],
-  "Nuclear & energy": ["Radiation detection", "Cargo and vehicle inspection"],
-  "Critical infrastructure": [
-    "Optical inspection technologies",
-    "Cargo and vehicle inspection",
-    "Radiation detection",
-  ],
-};
-
-const products = computed(() => [
-  ...(industryProducts[industry.value] ?? Object.keys(sectionIds)),
-  "Other",
-]);
-
-// Drop a product selection that no longer applies to the chosen industry
-watch(industry, () => {
-  if (product.value && !products.value.includes(product.value)) {
-    product.value = "";
-  }
-});
-
-function findProduct() {
-  const target = product.value || industryProducts[industry.value]?.[0];
-
-  if (!target || target === "Other" || industry.value === "Other") {
-    navigateTo("/contacts");
-    return;
-  }
-
-  const id = sectionIds[target];
-  if (!id) return;
-
-  document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-  highlighted.value = id;
-  setTimeout(() => (highlighted.value = ""), 2000);
+// Products shown in the shared modal.
+interface Product {
+  id: string;
+  name: string;
+  cardImage: string;
+  slides: string[];
+  intro?: string;
+  features: { title: string; text: string }[];
 }
 
-const industries = [
-  "Border security & customs",
-  "Airports & aviation",
-  "Seaports & logistics",
-  "Government & public security",
-  "Law enforcement",
-  "Military & defense",
-  "Nuclear & energy",
-  "Critical infrastructure",
-  "Other",
+const products: Product[] = [
+  {
+    id: "guardian-501",
+    name: "Guardian 501 series",
+    cardImage: "/guardian.png",
+    slides: [
+      "/guardian2.png",
+      "/guardian3.png",
+      "/guardian4.png",
+      "/guardian5.png",
+    ],
+    intro:
+      "The Guardian series provides mobile and handheld radiation detection solutions to identify radioactive materials and strengthen security at borders, checkpoints and cargo inspection points.",
+    features: [
+      {
+        title: "Multi-type radiation detection",
+        text: "Detects gamma, beta and neutron radiation from natural and man-made sources, depending on model configuration.",
+      },
+      {
+        title: "Radionuclide identification",
+        text: "Identifies more than 70 radionuclides to help assess potentially hazardous radioactive materials",
+      },
+      {
+        title: "Radiation measurement and source locating",
+        text: "Measures radiation levels and helps operators pinpoint suspicious radiation sources.",
+      },
+      {
+        title: "Portable, rugged design",
+        text: "Compact and lightweight for field inspections, land border checkpoints and mobile security operations.",
+      },
+      {
+        title: "Remote Access & Data Management",
+        text: "Provides a web interface for device configuration, data access and remote support.",
+      },
+    ],
+  },
+  {
+    id: "riideye-xm",
+    name: "RIIDEye™ X/M Series",
+    cardImage: "/riideye.png",
+    slides: ["/riideye.png"],
+    features: [
+      {
+        title: "Fast Isotope Identification",
+        text: "Identifies radioactive isotopes in real time, with identification possible in 30 seconds or less under suitable conditions.",
+      },
+      {
+        title: "Advanced Spectral Analysis",
+        text: "Uses patented Quadratic Compression Conversion (QCC) technology and live spectrum analysis for rapid, accurate isotope identification.",
+      },
+      {
+        title: "Colour-Coded Threat Classification",
+        text: "Displays colour-coded spectral peaks to help operators distinguish potential threats from benign or unknown radioactive materials.",
+      },
+      {
+        title: "Gamma and Optional Neutron Detection",
+        text: "Offers multiple detector configurations, including gamma detectors and optional neutron detection, depending on the model.",
+      },
+      {
+        title: "Rugged, Portable Design",
+        text: "Designed for field operations, with ergonomic handling, continuous automatic stabilisation and up to 8 hours of nominal battery life. The X model is IP65-rated and drop-resistant.",
+      },
+    ],
+  },
+  {
+    id: "radeye-g20",
+    name: "Thermo Scientific™ RadEye™ G20-10 and G20-ER10",
+    cardImage: "/thermo-scientific-radeye.png",
+    slides: ["/thermo-scientific-radeye.png"],
+    features: [
+      {
+        title: "Sensitive Radiation Detection",
+        text: "Measures X-ray and gamma radiation levels, with a fast response even at low dose rates below 1 µSv/h.",
+      },
+      {
+        title: "Wide Measurement Range",
+        text: "The G20-10 measures up to 2 mSv/h, while the G20-ER10 extends to 100 mSv/h for higher radiation environments.",
+      },
+      {
+        title: "Compact, Rugged Design",
+        text: "Lightweight at approximately 300 g, with a thick rubber protective cover for practical field use.",
+      },
+      {
+        title: "Long Battery Life",
+        text: "Operates for more than 500 hours using two AAA batteries, supporting extended field deployments.",
+      },
+      {
+        title: "Clear Displays and Audible Alerts",
+        text: "Features a backlit LCD with multilingual text, adjustable audible indication and an earphone output for noisy environments.",
+      },
+    ],
+  },
+  {
+    id: "verifinder-sn20",
+    name: "Symetrica VeriFinder SN20",
+    cardImage: "/symetrica-verifinder.png",
+    slides: ["/symetrica-verifinder.png"],
+    features: [
+      {
+        title: "Rapid Radionuclide Identification",
+        text: "Identifies radioactive isotopes to help security personnel assess potential nuclear and radiological threats.",
+      },
+      {
+        title: "High-Sensitivity Gamma Detection",
+        text: "Uses a sodium iodide (NaI) detector to detect gamma radiation from radioactive materials.",
+      },
+      {
+        title: "Advanced Isotope Analysis",
+        text: "Employs Symetrica's Discovery Technology to support reliable isotope identification and threat assessment.",
+      },
+      {
+        title: "Portable Handheld Design",
+        text: "Enables field inspections at land borders, ports, checkpoints and other security-sensitive locations.",
+      },
+      {
+        title: "Field-Based Radiation Assessment",
+        text: "Supports on-site investigation of suspicious radioactive materials, helping operators distinguish potential threats from benign sources.",
+      },
+    ],
+  },
+  {
+    id: "radeye-prd",
+    name: "Thermo Scientific™ RadEye™ PRD / PRD-ER",
+    cardImage: "/thermo-scientific-radeye-prd1.png",
+    slides: ["/thermo-scientific-radeye-prd1.png", "/thermo-scientific-radeye-prd2.png"],
+    features: [
+      {
+        title: "Highly Sensitive Radiation Detection",
+        text: "Detects low levels of gamma radiation, helping identify hidden or unexpected radioactive sources.",
+      },
+      {
+        title: "Natural Background Rejection (NBR)",
+        text: "Distinguishes artificial radiation from fluctuations in natural background radiation, reducing unnecessary alarms.",
+      },
+      {
+        title: "Radiation Source Localisation",
+        text: "Helps security personnel locate radioactive sources and contaminated materials during inspections.",
+      },
+      {
+        title: "Extended Measurement Range (PRD-ER)",
+        text: "The PRD measures up to 250 µSv/h, while the PRD-ER extends measurement up to 100 mSv/h for higher-radiation environments.",
+      },
+      {
+        title: "Compact Design with Audible and Visual Alarms",
+        text: "A lightweight, portable device with clear displays and audible alerts, suitable for field inspections and personal radiation screening.",
+      },
+    ],
+  },
+  {
+    id: "srpm",
+    name: "Spectroscopic radiation portal monitors (SRPM)",
+    cardImage: "/spectostropic-radiation-monitor1.png",
+    slides: ["/spectostropic-radiation-monitor1.png", "/spectostropic-radiation-monitor2.png", "/spectostropic-radiation-monitor3.png"],
+    features: [
+      {
+        title: "Automated Radiation Detection",
+        text: "Screens passing vehicles, cargo and containers for radioactive materials without requiring manual inspection of every item.",
+      },
+      {
+        title: "Spectroscopic Isotope Identification",
+        text: "Analyses gamma-ray energy spectra to help identify specific radionuclides and distinguish potential threats from naturally occurring radioactive materials.",
+      },
+      {
+        title: "Gamma and Neutron Detection",
+        text: "Detects gamma radiation and, where equipped, neutron emissions associated with radioactive and special nuclear materials.",
+      },
+      {
+        title: "Automatic Alarm and Threat Assessment",
+        text: "Alerts operators when radiation levels or isotope signatures meet configured alarm criteria, supporting timely investigation.",
+      },
+      {
+        title: "High-Throughput Vehicle Screening",
+        text: "Enables continuous screening of vehicles and cargo at land borders, ports and other checkpoints while helping maintain the flow of legitimate trade.",
+      },
+    ],
+  },
+  {
+    id: "brd",
+    name: "Backpack Radiation Detector (BRD)",
+    cardImage: "/backpack-radiation-monitor1.png",
+    slides: ["/backpack-radiation-monitor1.png", "/backpack-radiation-monitor2.png", "/backpack-radiation-monitor3.png"],
+    features: [
+      {
+        title: "Combined Gamma Spectroscopy and Neutron Detection",
+        text: "Detects gamma radiation and neutrons to support the identification of radioactive materials and potential nuclear threats.",
+      },
+      {
+        title: "On-the-Go Radionuclide Identification",
+        text: "Uses spectroscopic analysis to help identify radioactive isotopes during mobile security operations.",
+      },
+      {
+        title: "Portable, Hands-Free Operation",
+        text: "Backpack-mounted design allows personnel to move freely while monitoring radiation in the field.",
+      },
+      {
+        title: "Real-Time Radiation Monitoring and Alerts",
+        text: "Provides radiation readings and alerts to help operators investigate suspicious sources promptly.",
+      },
+      {
+        title: "Mobile Threat Detection",
+        text: "Supports searches across land borders, ports, large facilities and other security-sensitive areas where fixed monitors may not provide sufficient coverage.",
+      },
+    ],
+  },
+  {
+    id: "mobile-monitor",
+    name: "Mobile Radiation Monitor",
+    cardImage: "/mobile-radiation-monitor.png",
+    slides: ["/mobile-radiation-monitor.png"],
+    features: [
+      {
+        title: "Gamma and Neutron Detection",
+        text: "Detects gamma radiation and neutrons associated with radioactive materials and potential nuclear threats.",
+      },
+      {
+        title: "Mobile Screening Capabilities",
+        text: "Enables radiation screening across multiple locations, including land borders, ports and cargo inspection areas.",
+      },
+      {
+        title: "Vehicle and Cargo Monitoring",
+        text: "Supports the detection of radioactive materials concealed in vehicles, containers and transported goods.",
+      },
+      {
+        title: "Real-Time Radiation Alerts",
+        text: "Notifies operators when radiation levels exceed configured thresholds, allowing suspicious cases to be investigated.",
+      },
+      {
+        title: "Flexible Deployment",
+        text: "Supports mobile patrols and temporary checkpoints, extending radiation screening beyond fixed monitoring installations.",
+      },
+    ],
+  },
 ];
+
+const selected = ref<Product | null>(null);
+const productOpen = ref(false);
+const productSlide = ref(0);
+let productTimer: ReturnType<typeof setInterval> | undefined;
+
+const stopProductAutoplay = () => {
+  if (productTimer) clearInterval(productTimer);
+  productTimer = undefined;
+};
+const startProductAutoplay = () => {
+  stopProductAutoplay();
+  const count = selected.value?.slides.length ?? 0;
+  if (count < 2) return;
+  productTimer = setInterval(() => {
+    productSlide.value = (productSlide.value + 1) % count;
+  }, 3500);
+};
+const goToProductSlide = (i: number) => {
+  productSlide.value = i;
+  startProductAutoplay();
+};
+const openProduct = (product: Product) => {
+  selected.value = product;
+  productSlide.value = 0;
+  productOpen.value = true;
+  startProductAutoplay();
+};
+const closeProduct = () => {
+  productOpen.value = false;
+  stopProductAutoplay();
+};
+onBeforeUnmount(stopProductAutoplay);
+
+useHead({ title: "Products" });
 </script>

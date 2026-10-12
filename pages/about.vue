@@ -11,7 +11,10 @@
     <div class="space-y-10 section mx-auto">
       <!--Heading-->
       <div class="space-y-5">
-        <div data-aos="fade-right" class="flex gap-2.5 items-center text-accent">
+        <div
+          data-aos="fade-right"
+          class="flex gap-2.5 items-center text-accent"
+        >
           <div class="bg-current h-0.75 w-7.5"></div>
           <p class="text-lg font-semibold">About Atomix Systems</p>
         </div>
@@ -24,7 +27,10 @@
             Serving a <span class="text-primary"> Wider World.</span>
           </h1>
 
-          <div data-aos="fade-left" class="space-y-6 max-w-2xl text-lg font-light text-main">
+          <div
+            data-aos="fade-left"
+            class="space-y-6 max-w-2xl text-lg font-light text-main"
+          >
             <div class="space-y-2.5">
               <p>
                 Atomix Systems is a Kenyan security technology and inspection
@@ -70,36 +76,49 @@
           <div
             class="rounded-2xl py-10 px-6 bg-primary space-y-5 text-white sm:space-y-10 w-full"
           >
-            <h3 class="text-2xl font-bold">Our Approach</h3>
+            <h3 class="text-2xl font-bold">Our Reach</h3>
 
             <p class="leading-5.5">
-              Independent, technology-agnostic advisory, paired with hands-on
-              deployment support, from vendor evaluation to operator
-              certification.
+              Engagements spanning border crossings, seaports, airports and
+              legislative reform processes across multiple jurisdictions.
             </p>
           </div>
         </div>
 
-        <img data-aos="fade-left" src="/mission.png" alt="Security personnel monitoring inspection results on a computer" class="hidden lg:block" />
-      </div> 
+        <img
+          data-aos="fade-left"
+          src="/mission.png"
+          alt="Security personnel monitoring inspection results on a computer"
+          class="hidden lg:block"
+        />
+      </div>
     </div>
 
     <!--Where we operate-->
     <div class="space-y-7.5 section">
       <!--Heading-->
       <div class="space-y-1.5">
-        <div data-aos="fade-right" class="flex gap-2.5 items-center text-accent">
+        <div
+          data-aos="fade-right"
+          class="flex gap-2.5 items-center text-accent"
+        >
           <div class="bg-current h-0.75 w-7.5"></div>
           <p class="text-lg font-semibold">Where we operate</p>
         </div>
 
         <div class="flex max-lg:flex-col gap-3 justify-between">
-          <h2 data-aos="fade-right" class="text-[40px] font-bold text-main max-w-lg">
+          <h2
+            data-aos="fade-right"
+            class="text-[40px] font-bold text-main max-w-lg"
+          >
             Security Solutions for the
             <span class="text-primary">Real World</span>
           </h2>
 
-          <p data-aos="fade-left" class="text-lg font-light leading-7.5 text-main max-w-xl">
+          <p
+            data-aos="fade-left"
+            class="text-lg font-light leading-7.5 text-main max-w-xl"
+          >
             From international ports and land borders to airports and critical
             infrastructure, Atomix Systems delivers technologies curated around
             the security requirements of demanding environments.
@@ -202,10 +221,17 @@
       </div>
 
       <!--Body-->
-      <div  class="max-w-2xl mx-auto space-y-5">
+      <div class="max-w-2xl mx-auto space-y-5">
         <!--Assess-->
-        <div data-aos="fade-right" class="flex gap-7.5 sm:items-center sm:w-[80%] max-sm:flex-col">
-          <img src="/assess.svg" alt="Assess: site and threat assessment" class="w-fit" />
+        <div
+          data-aos="fade-right"
+          class="flex gap-7.5 sm:items-center sm:w-[80%] max-sm:flex-col"
+        >
+          <img
+            src="/assess.svg"
+            alt="Assess: site and threat assessment"
+            class="w-fit"
+          />
           <div class="space-y-2">
             <p class="text-accent-blue text-lg font-bold">1. Assess</p>
             <p class="leading-6">
@@ -217,10 +243,23 @@
 
         <!--Design-->
         <div class="flex gap-7.5 ml-auto sm:sm:w-[80%]">
-          <img data-aos="fade-right" src="/arrow-right.svg" alt="" aria-hidden="true" class="max-sm:hidden" />
+          <img
+            data-aos="fade-right"
+            src="/arrow-right.svg"
+            alt=""
+            aria-hidden="true"
+            class="max-sm:hidden"
+          />
 
-          <div data-aos="fade-left" class="flex gap-7.5 sm:items-center mt-15 max-sm:flex-col">
-            <img src="/design.svg" alt="Design: tailored security solution design" class="w-fit" />
+          <div
+            data-aos="fade-left"
+            class="flex gap-7.5 sm:items-center mt-15 max-sm:flex-col"
+          >
+            <img
+              src="/design.svg"
+              alt="Design: tailored security solution design"
+              class="w-fit"
+            />
             <div class="space-y-2">
               <p class="text-accent-blue text-lg font-bold">2. Design</p>
               <p class="leading-6">
@@ -233,8 +272,15 @@
 
         <!--Deploy-->
         <div class="flex gap-7.5 mr-auto sm:w-[80%]">
-          <div data-aos="fade-right" class="flex gap-7.5 max-sm:flex-col sm:items-center mt-15">
-            <img src="/deploy.svg" alt="Deploy: installation and commissioning" class="w-fit" />
+          <div
+            data-aos="fade-right"
+            class="flex gap-7.5 max-sm:flex-col sm:items-center mt-15"
+          >
+            <img
+              src="/deploy.svg"
+              alt="Deploy: installation and commissioning"
+              class="w-fit"
+            />
             <div class="space-y-2">
               <p class="text-accent-blue text-lg font-bold">3. Deploy</p>
               <p class="leading-6">
@@ -243,15 +289,34 @@
               </p>
             </div>
           </div>
-          <img data-aos="fade-left" src="/arrow-left.svg" alt="" aria-hidden="true" class="max-sm:hidden" />
+          <img
+            data-aos="fade-left"
+            src="/arrow-left.svg"
+            alt=""
+            aria-hidden="true"
+            class="max-sm:hidden"
+          />
         </div>
 
         <!--Maintain-->
         <div class="flex gap-7.5 ml-auto sm:w-[80%]">
-          <img data-aos="fade-right" src="/arrow-right.svg" alt="" aria-hidden="true" class="max-sm:hidden" />
+          <img
+            data-aos="fade-right"
+            src="/arrow-right.svg"
+            alt=""
+            aria-hidden="true"
+            class="max-sm:hidden"
+          />
 
-          <div data-aos="fade-left" class="flex gap-7.5 sm:items-center max-sm:flex-col mt-15">
-            <img src="/maintain.svg" alt="Maintain: ongoing support and maintenance" class="w-fit" />
+          <div
+            data-aos="fade-left"
+            class="flex gap-7.5 sm:items-center max-sm:flex-col mt-15"
+          >
+            <img
+              src="/maintain.svg"
+              alt="Maintain: ongoing support and maintenance"
+              class="w-fit"
+            />
             <div class="space-y-2">
               <p class="text-accent-blue text-lg font-bold">4. Maintain</p>
               <p class="leading-6">
@@ -345,18 +410,20 @@
       <Banner />
     </div>
 
-     <section data-aos="fade-up">
+    <section data-aos="fade-up">
       <Footer />
-     </section>
+    </section>
   </main>
 </template>
 
 <script setup lang="ts">
 useHead({ title: "About Us" });
 useSeoMeta({
-  description: "Atomix Systems is a Kenyan security and inspection company partnering with global technology leaders to protect ports, borders, airports and critical infrastructure.",
+  description:
+    "Atomix Systems is a Kenyan security and inspection company partnering with global technology leaders to protect ports, borders, airports and critical infrastructure.",
   ogTitle: "About Atomix Systems | Atomix Systems",
-  ogDescription: "Atomix Systems is a Kenyan security and inspection company partnering with global technology leaders to protect ports, borders, airports and critical infrastructure.",
+  ogDescription:
+    "Atomix Systems is a Kenyan security and inspection company partnering with global technology leaders to protect ports, borders, airports and critical infrastructure.",
 });
 
 const scroll = ref<HTMLElement | null>(null);

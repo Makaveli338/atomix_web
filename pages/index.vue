@@ -233,7 +233,7 @@
 
       <NuxtLink
         data-aos="fade-up"
-        to="/about"
+        to="/products"
         class="primary-btn !py-2 mx-auto mt-2.5!"
       >
        More About Our Products

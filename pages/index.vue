@@ -294,7 +294,7 @@
         >
           <!--Ports & Maritime-->
           <div
-            class="bg-[url('/1.png')] bg-cover bg-center h-87.5 px-4 pt-48 pb-6 flex flex-col justify-start gap-2.5 rounded-2xl sm:w-80 w-60 shrink-0"
+            class="bg-[url('/1.png')] bg-cover bg-center h-100 sm:h-87.5 px-4 pt-48 pb-6 flex flex-col justify-start gap-2.5 rounded-2xl sm:w-80 w-60 shrink-0"
           >
             <p class="text-lg font-bold">Ports & Maritime</p>
             <p class="leading-5.5">
@@ -305,7 +305,7 @@
 
           <!--Government & Critical Infrastructure-->
           <div
-            class="bg-[url('/2.png')] bg-cover bg-center h-87.5 px-4 pt-48 pb-6 flex flex-col justify-start gap-2.5 rounded-2xl sm:w-80 w-60 shrink-0"
+            class="bg-[url('/2.png')] bg-cover bg-center h-100 sm:h-87.5 px-4 pt-48 pb-6 flex flex-col justify-start gap-2.5 rounded-2xl sm:w-80 w-60 shrink-0"
           >
             <p class="text-lg font-bold">
               Government & Critical Infrastructure
@@ -318,7 +318,7 @@
 
           <!--Customs & Trade-->
           <div
-            class="bg-[url('/3.png')] bg-cover bg-center h-87.5 px-4 pt-48 pb-6 flex flex-col justify-start gap-2.5 rounded-2xl sm:w-80 w-60 shrink-0"
+            class="bg-[url('/3.png')] bg-cover bg-center h-100 sm:h-87.5 px-4 pt-48 pb-6 flex flex-col justify-start gap-2.5 rounded-2xl sm:w-80 w-60 shrink-0"
           >
             <p class="text-lg font-bold">Customs & Trade</p>
             <p class="leading-5.5">
@@ -329,7 +329,7 @@
 
           <!--Airports-->
           <div
-            class="bg-[url('/4.png')] bg-cover bg-center h-87.5 px-4 pt-48 pb-6 flex flex-col justify-start gap-2.5 rounded-2xl sm:w-80 w-60 shrink-0"
+            class="bg-[url('/4.png')] bg-cover bg-center h-100 sm:h-87.5 px-4 pt-48 pb-6 flex flex-col justify-start gap-2.5 rounded-2xl sm:w-80 w-60 shrink-0"
           >
             <p class="text-lg font-bold">Airports</p>
             <p class="leading-5.5">
@@ -340,7 +340,7 @@
 
           <!--Customs & Trade-->
           <div
-            class="bg-[url('/5.png')] bg-cover bg-center h-87.5 px-4 pt-48 pb-6 flex flex-col justify-start gap-2.5 rounded-2xl sm:w-80 w-60 shrink-0"
+            class="bg-[url('/5.png')] bg-cover bg-center h-100 sm:h-87.5 px-4 pt-48 pb-6 flex flex-col justify-start gap-2.5 rounded-2xl sm:w-80 w-60 shrink-0"
           >
             <p class="text-lg font-bold">Customs & Trade</p>
             <p class="leading-5.5">
@@ -351,7 +351,7 @@
 
           <!--Defence & Security -->
           <div
-            class="bg-[url('/6.png')] bg-cover bg-center h-87.5 px-4 pt-48 pb-6 flex flex-col justify-start gap-2.5 rounded-2xl sm:w-80 w-60 shrink-0"
+            class="bg-[url('/6.png')] bg-cover bg-center h-100 sm:h-87.5 px-4 pt-48 pb-6 flex flex-col justify-start gap-2.5 rounded-2xl sm:w-80 w-60 shrink-0"
           >
             <p class="text-lg font-bold">Defence & Security </p>
             <p class="leading-5.5">

@@ -4,9 +4,9 @@
       class="section bg-[url('/security.png')] bg-cover bg-center text-white py-15 sm:py-29.25 pl-12 rounded-2xl space-y-7.5"
     >
       <div data-aos="fade-right" class="space-y-2.5">
-        <p class="font-bold text-3xl sm:text-5xl">
+        <h2 class="font-bold text-3xl sm:text-5xl">
           Ready to <span class="text-accent">Strengthen</span> Your Security?
-        </p>
+        </h2>
         <p class="text-lg sm:text-2xl">
           Whether you are looking to enhance border security, improve cargo
           inspection or deploy advanced threat detection technologies, our team

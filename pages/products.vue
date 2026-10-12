@@ -16,10 +16,10 @@
             <p class="text-lg font-semibold">Our Products</p>
           </div>
 
-          <p class="text-[40px] font-medium">
+          <h1 class="text-[40px] font-medium">
             Technology Designed for
             <span class="text-primary">Critical Security Environments</span>
-          </p>
+          </h1>
         </div>
 
         <p class="text-lg font-light text-main text-center">
@@ -78,11 +78,11 @@
     </div>
 
     <!--Strengthen your Security-->
-    <div data-aos="fade-up" class="hidden">
+    <div data-aos="fade-up">
       <Banner />
     </div>
 
-    <section data-aos="fade-up" class="hidden">
+    <section data-aos="fade-up">
       <Footer />
     </section>
 
@@ -121,7 +121,9 @@
                   as="h4"
                   class="text-lg font-semibold leading-none text-slate-600"
                 >
-                  <div class="flex gap-4 sm:items-center justify-between max-sm:flex-col">
+                  <div
+                    class="flex gap-4 sm:items-center justify-between max-sm:flex-col"
+                  >
                     <p class="text-2xl font-semibold text-primary w-full">
                       {{ selected?.name }}
                     </p>
@@ -150,7 +152,10 @@
                   </div>
                 </DialogTitle>
 
-                <div v-if="selected" class="flex gap-6 sm:gap-10 max-sm:flex-col">
+                <div
+                  v-if="selected"
+                  class="flex gap-6 sm:gap-10 max-sm:flex-col"
+                >
                   <div
                     class="rounded-[10px] flex-center bg-[#F3F8FB] px-10 py-7.5 w-full h-80 sm:size-115 shrink-0"
                   >
@@ -161,7 +166,9 @@
                         :src="src"
                         :alt="selected.name"
                         class="absolute inset-0 m-auto max-h-full max-w-full object-contain transition-opacity duration-500"
-                        :class="i === productSlide ? 'opacity-100' : 'opacity-0'"
+                        :class="
+                          i === productSlide ? 'opacity-100' : 'opacity-0'
+                        "
                       />
 
                       <div
@@ -174,7 +181,9 @@
                           @click="goToProductSlide(i)"
                           :aria-label="`Show image ${i + 1}`"
                           class="cursor-pointer rounded-full size-2.5 transition-colors"
-                          :class="i === productSlide ? 'bg-primary' : 'bg-[#AACEFD]'"
+                          :class="
+                            i === productSlide ? 'bg-primary' : 'bg-[#AACEFD]'
+                          "
                         ></button>
                       </div>
                     </div>
@@ -271,6 +280,8 @@ const products: Product[] = [
     name: "RIIDEye™ X/M Series",
     cardImage: "/riideye.png",
     slides: ["/riideye.png"],
+    intro:
+      "A range of handheld radiation isotope identifiers designed to detect and identify radioactive materials, enabling security teams to investigate radiation alarms and assess potential nuclear threats.",
     features: [
       {
         title: "Fast Isotope Identification",
@@ -299,6 +310,7 @@ const products: Product[] = [
     name: "Thermo Scientific™ RadEye™ G20-10 and G20-ER10",
     cardImage: "/thermo-scientific-radeye.png",
     slides: ["/thermo-scientific-radeye.png"],
+    intro: "Portable X-ray and gamma survey meters designed to measure radiation levels, supporting radiation safety assessments and the investigation of suspected radioactive sources.",
     features: [
       {
         title: "Sensitive Radiation Detection",
@@ -327,6 +339,7 @@ const products: Product[] = [
     name: "Symetrica VeriFinder SN20",
     cardImage: "/symetrica-verifinder.png",
     slides: ["/symetrica-verifinder.png"],
+    intro: "A handheld radiation identification device designed to support gamma radiation detection and radionuclide identification during mobile security operations and field inspections.",
     features: [
       {
         title: "Rapid Radionuclide Identification",
@@ -354,7 +367,11 @@ const products: Product[] = [
     id: "radeye-prd",
     name: "Thermo Scientific™ RadEye™ PRD / PRD-ER",
     cardImage: "/thermo-scientific-radeye-prd1.png",
-    slides: ["/thermo-scientific-radeye-prd1.png", "/thermo-scientific-radeye-prd2.png"],
+    slides: [
+      "/thermo-scientific-radeye-prd1.png",
+      "/thermo-scientific-radeye-prd2.png",
+    ],
+    intro: "Compact personal radiation detectors designed to alert users to elevated gamma radiation levels, helping frontline personnel identify and locate potential radiological threats.",
     features: [
       {
         title: "Highly Sensitive Radiation Detection",
@@ -382,7 +399,12 @@ const products: Product[] = [
     id: "srpm",
     name: "Spectroscopic radiation portal monitors (SRPM)",
     cardImage: "/spectostropic-radiation-monitor1.png",
-    slides: ["/spectostropic-radiation-monitor1.png", "/spectostropic-radiation-monitor2.png", "/spectostropic-radiation-monitor3.png"],
+    slides: [
+      "/spectostropic-radiation-monitor1.png",
+      "/spectostropic-radiation-monitor2.png",
+      "/spectostropic-radiation-monitor3.png",
+    ],
+    intro: "Automated radiation screening systems that monitor passing vehicles and cargo, using spectroscopic analysis to help identify radioactive materials and flag potential nuclear security threats.",
     features: [
       {
         title: "Automated Radiation Detection",
@@ -410,7 +432,12 @@ const products: Product[] = [
     id: "brd",
     name: "Backpack Radiation Detector (BRD)",
     cardImage: "/backpack-radiation-monitor1.png",
-    slides: ["/backpack-radiation-monitor1.png", "/backpack-radiation-monitor2.png", "/backpack-radiation-monitor3.png"],
+    slides: [
+      "/backpack-radiation-monitor1.png",
+      "/backpack-radiation-monitor2.png",
+      "/backpack-radiation-monitor3.png",
+    ],
+    intro: "A portable, wearable radiation detection system combining gamma spectroscopy and neutron detection to support mobile searches for radioactive materials across border facilities and other security-sensitive environments.",
     features: [
       {
         title: "Combined Gamma Spectroscopy and Neutron Detection",
@@ -439,6 +466,7 @@ const products: Product[] = [
     name: "Mobile Radiation Monitor",
     cardImage: "/mobile-radiation-monitor.png",
     slides: ["/mobile-radiation-monitor.png"],
+    intro:"A mobile radiation screening solution designed to detect radioactive materials across vehicles, cargo and designated inspection areas, extending radiation monitoring beyond fixed checkpoints.",
     features: [
       {
         title: "Gamma and Neutron Detection",
@@ -498,4 +526,9 @@ const closeProduct = () => {
 onBeforeUnmount(stopProductAutoplay);
 
 useHead({ title: "Products" });
+useSeoMeta({
+  description: "Explore radiation detection and inspection equipment from Atomix Systems: Guardian 501, RIIDEye, RadEye, Symetrica VeriFinder, radiation portal monitors and backpack detectors.",
+  ogTitle: "Radiation Detection & Inspection Products | Atomix Systems",
+  ogDescription: "Explore radiation detection and inspection equipment from Atomix Systems: Guardian 501, RIIDEye, RadEye, Symetrica VeriFinder, radiation portal monitors and backpack detectors.",
+});
 </script>

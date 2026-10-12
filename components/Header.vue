@@ -2,7 +2,7 @@
   <section class="bg-[#FFFFFF1A] py-4 px-2 sm:px-8">
     <div class="section flex items-center justify-between w-full">
       <!--Logo-->
-      <img src="/logo.svg" alt="Logo" />
+      <img src="/logo.svg" alt="Atomix Systems logo" />
 
       <!--Nav links-->
       <div class="hidden lg:flex gap-6 items-center text-lg">
@@ -13,7 +13,7 @@
       </div>
 
       <!--Contact us btn-->
-      <NuxtLink to="/contacts" class="primary-btn max-lg:hidden">Talk to Us</NuxtLink>
+      <a href="mailto:info@atomix.co.ke" to="/contacts" class="primary-btn max-lg:hidden">Talk to Us</a>
       <button
         @click="isOpen = !isOpen"
         class="block lg:hidden rounded-md p-2 text-white"
@@ -46,7 +46,7 @@
       >
         <div class="flex items-center justify-between">
           <!--Logo-->
-          <img src="/logo.svg" alt="Logo" />
+          <img src="/logo.svg" alt="Atomix Systems logo" />
           <button
             @click="isOpen = false"
             class="rounded-full bg-white/10 p-2 hover:bg-white/20 transition-colors"
@@ -76,7 +76,7 @@
         </nav>
 
         <div class="mt-auto">
-          <NuxtLink to="/contacts" class="primary-btn w-full justify-center" @click="isOpen = false">Contact Us</NuxtLink>
+          <a href="mailto:info@atomix.co.ke" class="primary-btn w-full justify-center" @click="isOpen = false">Talk To Us</a>
         </div>
       </div>
     </div>

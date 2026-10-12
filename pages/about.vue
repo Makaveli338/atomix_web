@@ -19,10 +19,10 @@
         <div
           class="flex items-start justify-between flex-col lg:flex-row gap-3"
         >
-          <p data-aos="fade-right" class="text-[40px] font-bold text-main">
+          <h1 data-aos="fade-right" class="text-[40px] font-bold text-main">
             Built in <span class="text-primary"> Kenya.</span> <br />
             Serving a <span class="text-primary"> Wider World.</span>
-          </p>
+          </h1>
 
           <div data-aos="fade-left" class="space-y-6 max-w-2xl text-lg font-light text-main">
             <div class="space-y-2.5">
@@ -58,7 +58,7 @@
           <div
             class="rounded-2xl py-10 px-6 bg-[#D6E8FA] space-y-5 sm:space-y-10 w-full"
           >
-            <p class="text-primary text-2xl font-bold">Our Mission</p>
+            <h3 class="text-primary text-2xl font-bold">Our Mission</h3>
 
             <p class="leading-5.5 text-[#6B7C8A]">
               To strengthen national and regional capability to detect, deter
@@ -70,7 +70,7 @@
           <div
             class="rounded-2xl py-10 px-6 bg-primary space-y-5 text-white sm:space-y-10 w-full"
           >
-            <p class="text-2xl font-bold">Our Approach</p>
+            <h3 class="text-2xl font-bold">Our Approach</h3>
 
             <p class="leading-5.5">
               Independent, technology-agnostic advisory, paired with hands-on
@@ -80,7 +80,7 @@
           </div>
         </div>
 
-        <img data-aos="fade-left" src="/mission.png" alt="security personnel on computer" class="hidden lg:block" />
+        <img data-aos="fade-left" src="/mission.png" alt="Security personnel monitoring inspection results on a computer" class="hidden lg:block" />
       </div> 
     </div>
 
@@ -94,10 +94,10 @@
         </div>
 
         <div class="flex max-lg:flex-col gap-3 justify-between">
-          <p data-aos="fade-right" class="text-[40px] font-bold text-main max-w-lg">
+          <h2 data-aos="fade-right" class="text-[40px] font-bold text-main max-w-lg">
             Security Solutions for the
             <span class="text-primary">Real World</span>
-          </p>
+          </h2>
 
           <p data-aos="fade-left" class="text-lg font-light leading-7.5 text-main max-w-xl">
             From international ports and land borders to airports and critical
@@ -191,9 +191,9 @@
     <div class="w-full bg-[#10304C] space-y-10 py-16 text-white px-6">
       <!--Heading-->
       <div data-aos="fade-up" class="space-y-2 text-center">
-        <p class="text-4xl font-semibold text-accent">
+        <h2 class="text-4xl font-semibold text-accent">
           Our <span class="text-accent-blue">Approach</span>
-        </p>
+        </h2>
         <p class="text-lg font-light leading-7.5 max-w-6xl mx-auto">
           We provide independent advice and hands-on support to help you choose
           the right technology, implement it successfully and train your team to
@@ -205,7 +205,7 @@
       <div  class="max-w-2xl mx-auto space-y-5">
         <!--Assess-->
         <div data-aos="fade-right" class="flex gap-7.5 sm:items-center sm:w-[80%] max-sm:flex-col">
-          <img src="/assess.svg" alt="Assessing img" class="w-fit" />
+          <img src="/assess.svg" alt="Assess: site and threat assessment" class="w-fit" />
           <div class="space-y-2">
             <p class="text-accent-blue text-lg font-bold">1. Assess</p>
             <p class="leading-6">
@@ -217,10 +217,10 @@
 
         <!--Design-->
         <div class="flex gap-7.5 ml-auto sm:sm:w-[80%]">
-          <img data-aos="fade-right" src="/arrow-right.svg" alt="arrow" class="max-sm:hidden" />
+          <img data-aos="fade-right" src="/arrow-right.svg" alt="" aria-hidden="true" class="max-sm:hidden" />
 
           <div data-aos="fade-left" class="flex gap-7.5 sm:items-center mt-15 max-sm:flex-col">
-            <img src="/design.svg" alt="Designing img" class="w-fit" />
+            <img src="/design.svg" alt="Design: tailored security solution design" class="w-fit" />
             <div class="space-y-2">
               <p class="text-accent-blue text-lg font-bold">2. Design</p>
               <p class="leading-6">
@@ -234,7 +234,7 @@
         <!--Deploy-->
         <div class="flex gap-7.5 mr-auto sm:w-[80%]">
           <div data-aos="fade-right" class="flex gap-7.5 max-sm:flex-col sm:items-center mt-15">
-            <img src="/deploy.svg" alt="Deploying img" class="w-fit" />
+            <img src="/deploy.svg" alt="Deploy: installation and commissioning" class="w-fit" />
             <div class="space-y-2">
               <p class="text-accent-blue text-lg font-bold">3. Deploy</p>
               <p class="leading-6">
@@ -243,15 +243,15 @@
               </p>
             </div>
           </div>
-          <img data-aos="fade-left" src="/arrow-left.svg" alt="arrow" class="max-sm:hidden" />
+          <img data-aos="fade-left" src="/arrow-left.svg" alt="" aria-hidden="true" class="max-sm:hidden" />
         </div>
 
         <!--Maintain-->
         <div class="flex gap-7.5 ml-auto sm:w-[80%]">
-          <img data-aos="fade-right" src="/arrow-right.svg" alt="arrow" class="max-sm:hidden" />
+          <img data-aos="fade-right" src="/arrow-right.svg" alt="" aria-hidden="true" class="max-sm:hidden" />
 
           <div data-aos="fade-left" class="flex gap-7.5 sm:items-center max-sm:flex-col mt-15">
-            <img src="/maintain.svg" alt="Maintainance img" class="w-fit" />
+            <img src="/maintain.svg" alt="Maintain: ongoing support and maintenance" class="w-fit" />
             <div class="space-y-2">
               <p class="text-accent-blue text-lg font-bold">4. Maintain</p>
               <p class="leading-6">
@@ -268,9 +268,9 @@
     <div data-aos="fade-up" class="mt-7.5 section space-y-11">
       <!--Heading-->
       <div class="space-y-2 text-center">
-        <p class="text-4xl font-semibold text-accent">
+        <h2 class="text-4xl font-semibold text-accent">
           Our <span class="text-accent-blue">Partners</span>
-        </p>
+        </h2>
         <p class="text-lg font-light leading-7.5 max-w-6xl mx-auto">
           Dealership and technology relationships underpinning our portfolio
         </p>
@@ -302,7 +302,7 @@
         <div
           class="py-8 px-6 space-y-4.5 bg-white rounded-lg flex flex-col items-center"
         >
-          <img src="/symetrica.svg" alt="Symetrica  Logo" />
+          <img src="/symetrica.svg" alt="Symetrica logo" />
           <span
             class="block px-2.5 py-1.5 text-accent bg-[#FCEED9] w-fit rounded-full text-sm font-semibold"
             >Authorized Dealer</span
@@ -353,6 +353,11 @@
 
 <script setup lang="ts">
 useHead({ title: "About Us" });
+useSeoMeta({
+  description: "Atomix Systems is a Kenyan security and inspection company partnering with global technology leaders to protect ports, borders, airports and critical infrastructure.",
+  ogTitle: "About Atomix Systems | Atomix Systems",
+  ogDescription: "Atomix Systems is a Kenyan security and inspection company partnering with global technology leaders to protect ports, borders, airports and critical infrastructure.",
+});
 
 const scroll = ref<HTMLElement | null>(null);
 

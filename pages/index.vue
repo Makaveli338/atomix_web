@@ -236,7 +236,7 @@
         to="/about"
         class="primary-btn !py-2 mx-auto mt-2.5!"
       >
-        More About Us
+       More About Our Products
         <div class="text-accent">
           <svg
             width="24"

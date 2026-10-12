@@ -6,7 +6,7 @@
       class="sm:pb-6 border-b border-white w-full flex justify-between max-lg:flex-col gap-4"
     >
       <div class="space-y-4">
-        <img src="/logo.svg" alt="Logo" class="w-89.75 h-25" />
+        <img src="/logo.svg" alt="Atomix Systems logo" class="w-89.75 h-25" />
 
         <i class="text-[40px] font-bold text-white">
           <span class="text-accent"> Safer</span> today <br />
@@ -51,7 +51,7 @@
 
     <!--Copyright notch-->
     <div
-      class="max-sm:hidden absolute bottom-0 inset-x-12 max-sm:inset-x-4 bg-white rounded-t-2xl py-3 text-center text-main before:content-[''] before:absolute before:bottom-0 before:-left-4 before:size-4 before:bg-[radial-gradient(circle_at_0_0,transparent_calc(1rem_-_1px),white_1rem)] after:content-[''] after:absolute after:bottom-0 after:-right-4 after:size-4 after:bg-[radial-gradient(circle_at_100%_0,transparent_calc(1rem_-_1px),white_1rem)]"
+      class="max-sm:hidden absolute bottom-0 inset-x-12 max-sm:inset-x-4 bg-[#F3F8FB] rounded-t-2xl py-3 text-center text-main before:content-[''] before:absolute before:bottom-0 before:-left-4 before:size-4 before:bg-[radial-gradient(circle_at_0_0,transparent_calc(1rem_-_1px),white_1rem)] after:content-[''] after:absolute after:bottom-0 after:-right-4 after:size-4 after:bg-[radial-gradient(circle_at_100%_0,transparent_calc(1rem_-_1px),white_1rem)]"
     >
       © {{ new Date().getFullYear() }} Atomix Systems. All rights reserved.
     </div>

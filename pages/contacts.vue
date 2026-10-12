@@ -18,10 +18,10 @@
 
         <!-- -->
         <div class="space-y-8 max-w-lg">
-          <p class="text-4xl font-medium text-main">
+          <h1 class="text-4xl font-medium text-main">
             We are <span class="text-primary">always ready</span> to help you
             and answer your questions
-          </p>
+          </h1>
 
           <div class="space-y-2">
             <!--Visit us-->
@@ -52,7 +52,7 @@
               </div>
 
               <div class="space-y-1">
-                <p class="text-main text-2xl font-semibold leading-7.5">
+                <p class="text-main text-xl font-semibold leading-7.5">
                   Visit us at:
                 </p>
                 <p class="text-lg leading-7 text-[#6B7C8A]">
@@ -82,7 +82,7 @@
               </div>
 
               <div class="space-y-1">
-                <p class="text-main text-2xl font-semibold leading-7.5">
+                <p class="text-main text-xl font-semibold leading-7.5">
                   Call at:
                 </p>
                 <div class="text-lg leading-7 text-[#6B7C8A]">
@@ -116,7 +116,7 @@
               </div>
 
               <div class="space-y-1">
-                <p class="text-main text-2xl font-semibold leading-7.5">
+                <p class="text-main text-xl font-semibold leading-7.5">
                   Email at:
                 </p>
                 <div class="text-lg leading-7 text-[#6B7C8A]">
@@ -133,11 +133,12 @@
       </div>
 
       <!--Input form-->
-      <div
+      <form
         class="w-full sm:w-1/2 bg-white rounded-2xl p-8 space-y-6 shadow-[0px_2px_7px_-14.73px_#0000000A]"
+        @submit.prevent="submitForm"
       >
         <div class="space-y-2 border-b pb-4 border-[#E6E6E6]">
-          <p class="text-primary text-2xl font-bold">Get in Touch</p>
+          <h2 class="text-primary text-2xl font-bold">Get in Touch</h2>
           <p class="leading-5.5 text-[#6B7C8A]">
             Define your goals and identify areas where our solutions and
             products can add value to your business.
@@ -149,31 +150,41 @@
             <div class="space-y-1">
               <label for="name" class="text-main text-sm leading-5">Name</label>
               <input
+                id="name"
+                v-model="form.name"
+                name="name"
                 type="text"
-                value="John Paul"
+                placeholder="John Paul"
                 class="w-full border-0 text-sm p-3 leading-6 text-[#6B7C8A] outline-none focus:ring-0 border-b border-[#EBEBEB]"
               />
             </div>
 
             <div class="space-y-1">
-              <label for="name" class="text-main text-sm leading-5"
+              <label for="phone" class="text-main text-sm leading-5"
                 >Phone Number</label
               >
               <input
-                type="tell"
-                value="+254 70000000"
+                id="phone"
+                v-model="form.phone"
+                name="phone"
+                type="tel"
+                placeholder="+254 70000000"
                 class="w-full border-0 text-sm p-3 leading-6 text-[#6B7C8A] outline-none focus:ring-0 border-b border-[#EBEBEB]"
               />
             </div>
           </div>
 
           <div class="space-y-1">
-            <label for="name" class="text-main text-sm leading-5"
+            <label for="email" class="text-main text-sm leading-5"
               >Email <span class="text-[#D90011]">*</span></label
             >
             <input
-              type="tell"
-              value="papapaul@mail.com"
+              id="email"
+              v-model="form.email"
+              name="email"
+              type="email"
+              required
+              placeholder="papapaul@mail.com"
               class="w-full border-0 text-sm p-3 leading-6 text-[#6B7C8A] outline-none focus:ring-0 border-b border-[#EBEBEB]"
             />
           </div>
@@ -184,7 +195,8 @@
             >
             <select
               id="interest"
-              v-model="interest"
+              v-model="form.interest"
+              name="interest"
               class="w-full border-0 text-sm p-3 leading-6 text-[#6B7C8A] outline-none focus:ring-0 border-b border-[#EBEBEB]"
             >
               <option value="" disabled>Select an option</option>
@@ -195,21 +207,50 @@
           </div>
 
           <div class="space-y-1">
-            <label for="name" class="text-main text-sm leading-5"
+            <label for="message" class="text-main text-sm leading-5"
               >Write your message <span class="text-[#D90011]">*</span></label
             >
             <textarea
-              name="message"
               id="message"
+              v-model="form.message"
+              name="message"
+              required
               class="w-full border-0 text-sm p-3 leading-6 text-[#6B7C8A] outline-none focus:ring-0 border-b border-[#EBEBEB]"
             ></textarea>
           </div>
+
+          <!-- Honeypot: bots fill this, humans never see it -->
+          <input
+            v-model="form.botcheck"
+            type="checkbox"
+            name="botcheck"
+            class="hidden"
+            tabindex="-1"
+            autocomplete="off"
+          />
         </div>
 
+        <p
+          v-if="status === 'success'"
+          class="text-sm text-green-600"
+          role="status"
+        >
+          Thank you! Your message has been sent. We'll be in touch soon.
+        </p>
+        <p v-else-if="status === 'error'" class="text-sm text-[#D90011]" role="alert">
+          {{ errorMessage }}
+        </p>
+
         <div class="flex justify-end w-full">
-          <button class="primary-btn">Send Message</button>
+          <button
+            type="submit"
+            class="primary-btn disabled:opacity-60 disabled:cursor-not-allowed whitespace-nowrap"
+            :disabled="status === 'loading'"
+          >
+            {{ status === "loading" ? "Sending..." : "Send Message" }}
+          </button>
         </div>
-      </div>
+      </form>
     </section>
 
     <!--Map-->
@@ -233,12 +274,69 @@
 </template>
 
 <script setup lang="ts">
-useHead({ title: "Contacts" });
+useHead({ title: "Contact Us" });
+useSeoMeta({
+  description: "Get in touch with Atomix Systems for radiation detection, cargo and vehicle inspection solutions. Call, email or visit our team in Kenya.",
+  ogTitle: "Contact Atomix Systems | Atomix Systems",
+  ogDescription: "Get in touch with Atomix Systems for radiation detection, cargo and vehicle inspection solutions. Call, email or visit our team in Kenya.",
+});
+
+const WEB3FORMS_KEY = "2481350f-a8ba-452b-9f06-1e608d4f7867";
 
 const mapQuery = "Kilindini, Mombasa, Kenya";
 const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(mapQuery)}&z=15&output=embed`;
 
-const interest = ref("");
+const form = reactive({
+  name: "",
+  phone: "",
+  email: "",
+  interest: "",
+  message: "",
+  botcheck: false,
+});
+
+const status = ref<"idle" | "loading" | "success" | "error">("idle");
+const errorMessage = ref("");
+
+async function submitForm() {
+  if (status.value === "loading") return;
+  status.value = "loading";
+  errorMessage.value = "";
+
+  try {
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify({
+        access_key: WEB3FORMS_KEY,
+        subject: "New enquiry from Atomix website",
+        from_name: "Atomix Website",
+        ...form,
+      }),
+    });
+    const data = await res.json();
+
+    if (!res.ok || !data.success) {
+      throw new Error(data.message || "Something went wrong.");
+    }
+
+    status.value = "success";
+    Object.assign(form, {
+      name: "",
+      phone: "",
+      email: "",
+      interest: "",
+      message: "",
+      botcheck: false,
+    });
+  } catch (err) {
+    status.value = "error";
+    errorMessage.value =
+      err instanceof Error && err.message
+        ? err.message
+        : "Could not send your message. Please try again.";
+  }
+}
 
 const interests = [
   "Radiation detection",

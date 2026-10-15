@@ -107,21 +107,21 @@
           data-aos="fade-right"
           class="sm:col-span-5 bg-[#D3E6F8] h-full rounded-xl gap-12 flex justify-end flex-col relative overflow-hidden"
         >
-        <img src="/mask.svg" alt="" class="absolute right-0 h-full">
-        <div class="max-w-81.25 p-6">
-          <p class="text-3xl font-bold text-primary">Detect</p>
+          <img src="/mask.svg" alt="" class="absolute right-0 h-full" />
+          <div class="max-w-81.25 p-6">
+            <p class="text-3xl font-bold text-primary">Detect</p>
 
-          <div class="space-y-2 text-main">
-            <p class="text-lg font-semibold">
-              Identify threats before they become incidents.
-            </p>
-            <p class="leading-6">
-              Our detection technologies help security teams identify
-              radioactive materials, concealed threats and other security risks
-              moving through ports, borders and critical facilities.
-            </p>
+            <div class="space-y-2 text-main">
+              <p class="text-lg font-semibold">
+                Identify threats before they become incidents.
+              </p>
+              <p class="leading-6">
+                Our detection technologies help security teams identify
+                radioactive materials, concealed threats and other security
+                risks moving through ports, borders and critical facilities.
+              </p>
+            </div>
           </div>
-        </div>
         </div>
 
         <div data-aos="fade-left" class="sm:col-span-7 space-y-3">
@@ -236,7 +236,7 @@
         to="/products"
         class="primary-btn !py-2 mx-auto mt-2.5!"
       >
-       More About Our Products
+        More About Our Products
         <div class="text-accent">
           <svg
             width="24"
@@ -286,7 +286,9 @@
       </div>
 
       <!--Body-->
-      <div class="xl:-mr-[max(1.5rem,calc((100vw-80rem)/2+1.5rem))] max-w-360 relative rounded-2xl overflow-hidden mr-4">
+      <div
+        class="xl:-mr-[max(1.5rem,calc((100vw-80rem)/2+1.5rem))] max-w-360 relative rounded-2xl overflow-hidden mr-4"
+      >
         <div
           ref="scroll"
           data-aos="fade-up"
@@ -322,8 +324,8 @@
           >
             <p class="text-lg font-bold">Customs & Trade</p>
             <p class="leading-5.5">
-              Trees, landscaping and environmental initiatives for greener
-              environments.
+              Helping authorities strengthen cargo inspection and identify
+              potential security risks while facilitating legitimate trade.
             </p>
           </div>
 
@@ -361,7 +363,7 @@
           </div>
         </div>
 
-         <!--Scroll hint-->
+        <!--Scroll hint-->
         <div
           class="rounded-r-2xl overflow-hidden pointer-events-none absolute inset-y-0 right-0 w-24 bg-linear-to-l from-black/40 to-transparent"
         ></div>
